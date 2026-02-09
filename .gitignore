@@ -1,0 +1,26 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local tooling
+.claude/
+
+# Python
+**/__pycache__/
+**/*.pyc
+backend/venv/
+backend/outputs/
+backend/.env
+
+# Node
+unified-suite-hub-9c4bfef3-main/node_modules/
+unified-suite-hub-9c4bfef3-main/dist/
+unified-suite-hub-9c4bfef3-main/.env
+
+# Logs
+*.log
+
+# Local archives
+*.zip

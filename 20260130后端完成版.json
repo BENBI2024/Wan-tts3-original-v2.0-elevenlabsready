@@ -1,0 +1,1763 @@
+{
+  "name": "202601271802_detach_seedspeech_lang",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "82de31df-d8ff-45ac-b50d-866370bf36b5",
+              "name": "output_folder_path",
+              "value": "/tmp/",
+              "type": "string"
+            },
+            {
+              "id": "7ce67c29-75ed-467f-8d94-99f0a2351ef1",
+              "name": "video_ratio",
+              "value": "3:4",
+              "type": "string"
+            },
+            {
+              "id": "f73d3634-a56c-4bb3-902d-a260bcce0a90",
+              "name": "accessKeyId",
+              "value": "AKLTY2U4ODliYzY2YmZhNDBhMzhjNDAwNmIwMDcyNDIwODk",
+              "type": "string"
+            },
+            {
+              "id": "36648cfe-fcb3-44ab-8617-94eb4576b7f2",
+              "name": "secretKey",
+              "value": "T1Rsak9UaGxOVFF6WXpnMU5EUmpPVGczTkRjeU1UUTNZV1poTURGa1pEUQ==",
+              "type": "string"
+            },
+            {
+              "id": "902bb6ff-faae-4d34-8c1c-5516f2c34fcb",
+              "name": "data",
+              "value": "data0",
+              "type": "binary"
+            },
+            {
+              "id": "6c33347a-6392-4056-909b-4870a9edd3dd",
+              "name": "bucketName",
+              "value": "liuxinyu",
+              "type": "string"
+            },
+            {
+              "id": "bc53c4a7-d214-48ce-9d3d-7fb394139128",
+              "name": "endpoint",
+              "value": "tos-cn-beijing.volces.com",
+              "type": "string"
+            },
+            {
+              "id": "9a2e60ac-2361-49a4-8d30-4230ca592d09",
+              "name": "region",
+              "value": "cn-beijing",
+              "type": "string"
+            },
+            {
+              "id": "d520197a-3f1e-4ea7-b87e-9e546d30ad5d",
+              "name": "filename",
+              "value": "={{ $json.files[0].fileName }}",
+              "type": "string"
+            },
+            {
+              "id": "db5c9105-63b4-4a23-a1e6-2d360a216687",
+              "name": "ark_base_url",
+              "value": "https://ark.ap-southeast.bytepluses.com",
+              "type": "string"
+            },
+            {
+              "id": "07f16604-f266-4697-9501-d65a7f9cd39b",
+              "name": "ark_api_key",
+              "value": "3f5fe489-36c0-4213-88e0-c1bf1c00ede7",
+              "type": "string"
+            },
+            {
+              "id": "458e7b91-ebe9-440f-aaac-6e523ee04222",
+              "name": "seedream_model",
+              "value": "seedream-4-0-250828",
+              "type": "string"
+            },
+            {
+              "id": "0fdfc224-a7be-419e-a5a6-26e52bd77f31",
+              "name": "seedream_size",
+              "value": "2k",
+              "type": "string"
+            },
+            {
+              "id": "4263371f-2867-41a9-8f17-554ccd651448",
+              "name": "seedream_watermark",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "b1792dc5-5d66-4fa1-9ebd-7a88b4067d32",
+              "name": "seedream_use_reference_image",
+              "value": true,
+              "type": "boolean"
+            },
+            {
+              "id": "22bb99c4-60a8-46f2-8c23-3de1e0abe45f",
+              "name": "seedance_model",
+              "value": "seedance-1-5-pro-251215",
+              "type": "string"
+            },
+            {
+              "id": "dcc19876-d90d-4d11-9227-cd99520f1c6e",
+              "name": "seedance_duration",
+              "value": 5,
+              "type": "number"
+            },
+            {
+              "id": "96bfe065-b36b-4297-a148-32a86a34e193",
+              "name": "seedance_camerafixed",
+              "value": false,
+              "type": "boolean"
+            },
+            {
+              "id": "0cd7e4d0-dec8-4aa2-83c1-9df1269df2a7",
+              "name": "seedspeech_endpoint",
+              "value": "https://voice.ap-southeast-1.bytepluses.com/api/v3/tts/unidirectional",
+              "type": "string"
+            },
+            {
+              "id": "a143eb56-e54c-4e26-9eac-028ee89b4948",
+              "name": "seedspeech_appid",
+              "value": "YOUR_APPID",
+              "type": "string"
+            },
+            {
+              "id": "e21de3c2-cc36-4481-907d-adaa30e395f3",
+              "name": "seedspeech_token",
+              "value": "YOUR_ACCESS_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "93229e73-6e11-44a5-9886-efbed02988b8",
+              "name": "seedspeech_cluster",
+              "value": "volcano_tts",
+              "type": "string"
+            },
+            {
+              "id": "638d375e-a1b3-4e70-96ae-737973f8c0b2",
+              "name": "seedspeech_resource_id",
+              "value": "volc.megatts.default",
+              "type": "string"
+            },
+            {
+              "id": "425d3527-707b-4f06-81d7-632d8491184d",
+              "name": "seedspeech_speaker_id",
+              "value": "S_bRdcP1AR1",
+              "type": "string"
+            },
+            {
+              "id": "d0bc8aa8-90f9-498e-a2cd-9d396ece90bf",
+              "name": "seedspeech_encoding",
+              "value": "mp3",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        11616,
+        7296
+      ],
+      "id": "70a6bb06-e388-44b5-bded-1c8a38546e4c",
+      "name": "配置字段"
+    },
+    {
+      "parameters": {
+        "amount": 10
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        12240,
+        7680
+      ],
+      "id": "7cbe7020-a77a-4a90-ae46-4dd16403654a",
+      "name": "Wait",
+      "webhookId": "61d93d87-c716-4765-8eca-1548a957b2b9"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const crypto = require('crypto');\n\nconst cfg = $items('配置字段')?.[0]?.json;\nif (!cfg) throw new Error('未找到节点“配置字段”的输出');\n\nconst required = ['bucketName', 'region', 'accessKeyId', 'secretKey', 'endpoint'];\nfor (const key of required) {\n  if (cfg[key] === undefined || cfg[key] === null || cfg[key] === '') {\n    throw new Error('缺少配置字段: ' + key);\n  }\n}\n\nconst objectKey = $json.objectKey || $json.object_key || cfg.filename;\nif (!objectKey) throw new Error('缺少 objectKey（用于上传文件名）');\n\nconst CONFIG = {\n  bucketName: cfg.bucketName,\n  region: cfg.region,\n  accessKeyId: cfg.accessKeyId,\n  secretAccessKey: cfg.secretKey,\n  endpoint: cfg.endpoint,\n};\n\nfunction hmacSha256(key, data) {\n  return crypto.createHmac('sha256', key).update(data, 'utf8').digest();\n}\n\nfunction getSigningKey(secretKey, dateStamp, region) {\n  const kDate = hmacSha256(secretKey, dateStamp);\n  const kRegion = hmacSha256(kDate, region);\n  const kService = hmacSha256(kRegion, 'tos');\n  return hmacSha256(kService, 'request');\n}\n\nfunction pad2(n) {\n  return String(n).padStart(2, '0');\n}\n\nfunction getIso8601Date() {\n  const d = new Date();\n  return (\n    d.getUTCFullYear() +\n    pad2(d.getUTCMonth() + 1) +\n    pad2(d.getUTCDate()) +\n    'T' +\n    pad2(d.getUTCHours()) +\n    pad2(d.getUTCMinutes()) +\n    pad2(d.getUTCSeconds()) +\n    'Z'\n  );\n}\n\nfunction getDateStamp() {\n  const d = new Date();\n  return d.getUTCFullYear() + pad2(d.getUTCMonth() + 1) + pad2(d.getUTCDate());\n}\n\nfunction generatePolicy(bucketName, objectKeyPrefix, expirationDate, tosDate, credential) {\n  const policy = {\n    expiration: expirationDate,\n    conditions: [\n      { bucket: bucketName },\n      ['starts-with', '$key', objectKeyPrefix || ''],\n      ['content-length-range', 0, 104857600],\n      { 'x-tos-algorithm': 'TOS4-HMAC-SHA256' },\n      { 'x-tos-credential': credential },\n      { 'x-tos-date': tosDate },\n      { success_action_status: '201' },\n    ],\n  };\n\n  return Buffer.from(JSON.stringify(policy), 'utf8').toString('base64');\n}\n\nfunction generateSignature(policyBase64, signingKey) {\n  return crypto.createHmac('sha256', signingKey).update(policyBase64, 'utf8').digest('hex');\n}\n\nfunction getUploadParams(objectKey, options = {}) {\n  const tosDate = getIso8601Date();\n  const dateStamp = getDateStamp();\n  const credential = CONFIG.accessKeyId + '/' + dateStamp + '/' + CONFIG.region + '/tos/request';\n\n  const exp = new Date(Date.now() + 60 * 60 * 1000);\n  exp.setUTCMilliseconds(0);\n  const expirationDate = exp.toISOString().replace(/\\.[0-9]{3}Z$/, '.000Z');\n\n  const policy = generatePolicy(CONFIG.bucketName, objectKey, expirationDate, tosDate, credential);\n  const signingKey = getSigningKey(CONFIG.secretAccessKey, dateStamp, CONFIG.region);\n  const signature = generateSignature(policy, signingKey);\n\n  const uploadUrl = 'https://' + CONFIG.bucketName + '.' + CONFIG.endpoint + '/';\n\n  const formFields = {\n    key: objectKey,\n    success_action_status: '201',\n    'x-tos-algorithm': 'TOS4-HMAC-SHA256',\n    'x-tos-date': tosDate,\n    'x-tos-credential': credential,\n    policy,\n    'x-tos-signature': signature,\n  };\n\n  if (options.success_redirect) formFields.success_action_redirect = options.success_redirect;\n\n  if (options.metadata && typeof options.metadata === 'object') {\n    for (const [k, v] of Object.entries(options.metadata)) {\n      formFields['x-tos-meta-' + k] = v;\n    }\n  }\n\n  if (options.content_disposition) {\n    formFields['Content-Disposition'] = options.content_disposition;\n  }\n\n  return { url: uploadUrl, method: 'POST', formFields };\n}\n\nconst params = getUploadParams(objectKey);\nreturn { json: { ...$json, params }, binary: $input.item.binary };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12560,
+        7296
+      ],
+      "id": "5393b92e-ab6c-458c-9c88-af85e3f0bc85",
+      "name": "计算文件上传参数"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('计算文件上传参数').item.json.params.url }}",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields.key }}"
+            },
+            {
+              "name": "success_action_status",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields.success_action_status }}"
+            },
+            {
+              "name": "x-tos-algorithm",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields['x-tos-algorithm'] }}"
+            },
+            {
+              "name": "x-tos-date",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields['x-tos-date'] }}"
+            },
+            {
+              "name": "x-tos-credential",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields['x-tos-credential'] }}"
+            },
+            {
+              "name": "policy",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields.policy }}"
+            },
+            {
+              "name": "x-tos-signature",
+              "value": "={{ $('计算文件上传参数').item.json.params.formFields['x-tos-signature'] }}"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        12960,
+        7296
+      ],
+      "id": "9eeaaa28-37ad-412d-adcf-0b614fb81aab",
+      "name": "上传产品图片"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const cfg = $items('配置字段')?.[0]?.json;\nif (!cfg) throw new Error('Config node output not found');\n\nif (!cfg.ark_api_key) throw new Error('Missing ark_api_key in config node');\n\nconst model = cfg.seedream_model || 'seedream-4-0-250828';\nconst size = cfg.seedream_size || '2k';\nconst watermark = (cfg.seedream_watermark === false || cfg.seedream_watermark === 'false') ? false : true;\n\nconst prompt = $json.person_prompt || $json.prompt || $json.action_text;\nif (!prompt) throw new Error('Missing prompt/person_prompt/action_text for image generation');\n\n// IMPORTANT_REF_HINT: ????????\nconst refHint = '????????????????????????????????/??/??/????????';\nconst promptWithRef = `${prompt}\\n\\n${refHint}`;\n\nconst bossUrl = $json.boss_img_url || $json.product_img_url || $json.reference_img_url || null;\nlet factoryUrls = [];\nif (Array.isArray($json.factory_img_urls)) {\n  factoryUrls = $json.factory_img_urls;\n} else if (typeof $json.factory_img_urls === 'string' && $json.factory_img_urls.trim()) {\n  try {\n    const parsed = JSON.parse($json.factory_img_urls);\n    if (Array.isArray(parsed)) factoryUrls = parsed;\n  } catch (e) {}\n}\n\nconst useReferenceImage = true;\n\nconst request_body = {\n  model,\n  prompt: promptWithRef,\n  response_format: 'url',\n  size,\n  stream: false,\n  watermark,\n};\n\nif (useReferenceImage) {\n  const refImage = bossUrl || factoryUrls[0] || null;\n  if (refImage) request_body.image = refImage;\n}\n\nreturn { json: { request_body, prompt: promptWithRef, bossUrl, factoryUrls } };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11424,
+        7680
+      ],
+      "id": "8eae85a5-f25b-4817-a634-1635a90269d6",
+      "name": "计算生成图片任务参数-模特"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "return $json;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11664,
+        7680
+      ],
+      "id": "7ec75cb3-0341-4d5e-9946-8db16fde6a37",
+      "name": "请求参数整理"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('配置字段').first().json.ark_base_url }}/api/v3/images/generations",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer {{ $('配置字段').first().json.ark_api_key }}\"}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.request_body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        11920,
+        7680
+      ],
+      "id": "465ee715-37ad-46d5-a90a-3b4f2dcb5ea9",
+      "name": "发起生成图片任务请求-模特",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const resp = $items('发起生成图片任务请求-模特')[0]?.json;\nif (!resp) throw new Error('Image generation response not found');\n\nfunction findFirstUrl(value) {\n  if (!value) return null;\n  if (typeof value === 'string') {\n    const s = value.trim();\n    if (/^https?:\\/\\//i.test(s)) return s;\n    return null;\n  }\n  if (Array.isArray(value)) {\n    for (const v of value) {\n      const u = findFirstUrl(v);\n      if (u) return u;\n    }\n    return null;\n  }\n  if (typeof value === 'object') {\n    const direct = value.url || value.image_url || value.imageUrl;\n    const u0 = findFirstUrl(direct);\n    if (u0) return u0;\n    for (const k of Object.keys(value)) {\n      const u = findFirstUrl(value[k]);\n      if (u) return u;\n    }\n  }\n  return null;\n}\n\nlet imageUrl = null;\nif (Array.isArray(resp.data)) imageUrl = findFirstUrl(resp.data);\nif (!imageUrl) imageUrl = findFirstUrl(resp);\n\nif (!imageUrl) throw new Error('Failed to extract image URL from BytePlus response');\n\nreturn {\n  json: {\n    data: { status: 'done', image_urls: [imageUrl] },\n    raw: resp,\n  },\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12432,
+        7680
+      ],
+      "id": "437e73fc-164a-4e7b-bf0f-d47e9289d952",
+      "name": "计算查询图片任务参数-模特"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "return $json;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12672,
+        7680
+      ],
+      "id": "4a19a41f-0981-43c0-bc3d-fb7721fe34b7",
+      "name": "发起查询图片任务请求-模特"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "556ab6fb-1800-4dc1-af66-af075b2a7d09",
+              "name": "person_img_url",
+              "value": "={{ $('发起查询图片任务请求-模特').first().json.data.image_urls[0] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        13168,
+        7664
+      ],
+      "id": "3da69a13-ac69-4b97-8e54-43f51a5b5ffd",
+      "name": "模特字段整理"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "df9cbdc0-e7ac-4978-a247-d326e96abd38",
+              "name": "voice_text",
+              "value": "={{ $('视频文案生成').item.json.output.voice_text }}",
+              "type": "string"
+            },
+            {
+              "id": "079324e5-3983-4cc3-98cc-d8c595404b53",
+              "name": "person_prompt",
+              "value": "=[场景主题]：写实纪实摄影风格的一张照片，展现一位成功的工厂企业主在自己的生产基地；真实记录感，不摆拍\n\n[人物与互动]：{{ $json.output.model }}；{{ $json.output.relation }}；单人入镜；正面胸像或半身像；人物居中构图；直视镜头；双眼清晰可见；五官无遮挡；脸部细节清晰、可用于数字人一致性首帧\n\n[环境细节]：{{ $json.output.env }}；背景是清晰可信的工厂实景（生产线/设备/货架/原料托盘/质检台/安全标识等），空间纵深明显；背景轻微虚化但仍能辨认工业要素，避免喧宾夺主\n\n[光影质感]：{{ $json.output.light }}；肤色与金属材质呈现真实漫反射；不过曝、不死黑；无电影棚拍光\n\n[拍摄规格]：iPhone 2x 直拍质感（50mm 等效视角），轻微手持纪实感；4k 清晰度；中性色调、低对比度、自然饱和；无滤镜、无HDR风、无过度锐化；皮肤保留真实毛孔与纹理，拒绝磨皮美颜\n\n[负面约束]：不要侧脸/背影/低头/仰头/大幅度遮挡脸部；不要多人同框；不要夸张表情；不要眼睛闭合或强反光墨镜；不要漫画/二次元/赛博霓虹/奇幻特效；不要过度磨皮、AI塑料肤质；不要文字水印、logo、字幕",
+              "type": "string"
+            },
+            {
+              "id": "7135d816-3252-4548-932b-882cc1ef05cd",
+              "name": "action_text",
+              "value": "基于输入图片中的人物与场景，生成一段约 5 秒的超写实纪实风格视频。  人物为工厂企业主，外貌、脸型、五官比例、发型、肤色、服装与输入图片保持高度一致，不新增或改变人物特征。人物正面面对镜头，站在工厂生产环境中，保持自然放松的站姿。  视频开始时人物已经处于画面中，正脸清晰可见。人物直视镜头，随后出现轻微自然动作：轻微点头或短暂眼神变化，面部表情稳定、自信、克制，不夸张、不表演化。可伴随一只手做出非常小幅度的展示性动作（如轻微抬手示意身旁设备），动作缓慢、真实。  人物始终保持正脸或接近正脸角度，不出现明显侧脸、背影或大幅转头，不遮挡面部，不离开画面中心。  场景为真实工厂内部，生产设备、生产线或产品货架保持静态或极轻微背景动态，不喧宾夺主。整体呈现为纪录片式实拍感，而非广告或剧情演绎。  镜头固定或极轻微手持感，无明显推拉摇移；焦距稳定，人物为画面主体。光线为真实工厂环境光，肤色自然，金属设备呈现真实反射。  整体风格超级写实、自然、克制，像一段用手机在工厂里随手记录下的真实视频。",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        13440,
+        6896
+      ],
+      "id": "9d174c1b-0461-414c-8afe-358475fea0a0",
+      "name": "模特prompt"
+    },
+    {
+      "parameters": {
+        "jsCode": "const image_url = $json.image_url\nconst audio_url = $json.audio_url\nconst prompt = $json.prompt\nconst json = {\"req_key\":\"jimeng_realman_avatar_picture_omni_v15\",\"image_url\":image_url,\"audio_url\":audio_url,\"prompt\":prompt}\n\nreturn json;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11632,
+        8064
+      ],
+      "id": "3333f958-4aaf-47fb-8e60-f9e12c9b3f7c",
+      "name": "请求参数整理1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('配置字段').first().json.ark_base_url }}/api/v3/contents/generations/tasks",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer {{ $('配置字段').first().json.ark_api_key }}\"}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('计算生成数字人任务参数').first().json.request_body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        11824,
+        8064
+      ],
+      "id": "59e34903-54eb-45da-ac22-261c6849963b",
+      "name": "发起生成数字人任务请求",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const cfg = $items('\\u914d\\u7f6e\\u5b57\\u6bb5')?.[0]?.json;\nif (!cfg) throw new Error('Config node output not found');\n\nif (!cfg.ark_api_key) throw new Error('Missing ark_api_key in config node');\n\nconst model = cfg.seedance_model || 'seedance-1-5-pro-251215';\nconst imageUrl = $items('\\u6a21\\u7279\\u5b57\\u6bb5\\u6574\\u7406')?.[0]?.json?.person_img_url;\nif (!imageUrl) throw new Error('Missing person_img_url');\n\nconst basePrompt = $items('\\u751f\\u56fe\\u5b57\\u6bb5\\u6574\\u7406')?.[0]?.json?.action_text || $items('\\u6a21\\u7279prompt')?.[0]?.json?.action_text || '';\nif (!basePrompt) throw new Error('Missing action_text');\n\nconst language = $items('\\u89e3\\u6790\\u8f93\\u5165\\u5b57\\u6bb5')?.[0]?.json?.language || 'zh';\nconst voiceText = $items('\\u89c6\\u9891\\u6587\\u6848\\u751f\\u6210')?.[0]?.json?.output?.voice_text || '';\n\nconst duration = Number(cfg.seedance_duration ?? 5);\nconst cameraFixed = (cfg.seedance_camerafixed === true || cfg.seedance_camerafixed === 'true') ? 'true' : 'false';\n\nlet prompt = basePrompt;\nif (voiceText) {\n  prompt += `\\n\\n[VOICEOVER]\\nLanguage: ${language}\\nText: ${voiceText}\\nPlease generate voice audio for the above text and keep lip-sync natural.`;\n}\n\nconst text = `${prompt} --duration ${duration} --camerafixed ${cameraFixed}`;\n\nconst request_body = {\n  model,\n  generate_audio: true,\n  content: [\n    { type: 'text', text },\n    { type: 'image_url', image_url: { url: imageUrl } },\n  ],\n};\n\nreturn { json: { request_body, image_url: imageUrl, prompt: text, language, voice_text: voiceText } };\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11424,
+        8064
+      ],
+      "id": "606f6f36-ffb4-474e-8c7f-cff89b533dbf",
+      "name": "计算生成数字人任务参数"
+    },
+    {
+      "parameters": {
+        "amount": 30
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        12032,
+        8064
+      ],
+      "id": "e5c19109-214f-4eda-a38f-91386938ec4f",
+      "name": "Wait1",
+      "webhookId": "61d93d87-c716-4765-8eca-1548a957b2b9"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const cfg = $items('配置字段')?.[0]?.json;\nif (!cfg) throw new Error('Config node output not found');\n\nconst createResp = $items('发起生成数字人任务请求')[0]?.json;\nif (!createResp) throw new Error('Video task create response not found');\n\nconst task_id = createResp.id || createResp.task_id || createResp.data?.id || createResp.data?.task_id;\nif (!task_id) throw new Error('Failed to extract task_id/id from create response');\n\nconst baseUrl = cfg.ark_base_url || 'https://ark.ap-southeast.bytepluses.com';\nconst query_url = `${baseUrl}/api/v3/contents/generations/tasks/${task_id}`;\n\nreturn { json: { task_id, query_url } };\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12224,
+        8064
+      ],
+      "id": "f8df8bf4-35a1-41dc-8f1c-ac345b1a58b9",
+      "name": "计算查询数字人任务参数"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.query_url }}",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={\"Authorization\":\"Bearer {{ $('配置字段').first().json.ark_api_key }}\"}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        12448,
+        8064
+      ],
+      "id": "d30c3fac-66ee-4eb6-aef3-23efaa5bb4f4",
+      "name": "发起查询数字人任务请求",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4b12a9e0-7be3-41d5-a640-2781780d13af",
+              "leftValue": "={{ $json.data.status }}",
+              "rightValue": "done",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        12992,
+        8064
+      ],
+      "id": "969098a8-6a50-4178-878d-aa7cf82324db",
+      "name": "If3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4b12a9e0-7be3-41d5-a640-2781780d13af",
+              "leftValue": "={{ $json.data.status }}",
+              "rightValue": "done",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        12912,
+        7680
+      ],
+      "id": "aa8894e7-3e0e-40cf-8ae5-91e69b29eab6",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const crypto = require('crypto');\n\nconst cfg = $items('配置字段')?.[0]?.json;\nif (!cfg) throw new Error('未找到节点“配置字段”的输出');\n\nconst required = ['bucketName', 'region', 'accessKeyId', 'secretKey', 'endpoint'];\nfor (const key of required) {\n  if (cfg[key] === undefined || cfg[key] === null || cfg[key] === '') {\n    throw new Error('缺少配置字段: ' + key);\n  }\n}\n\nconst CONFIG = {\n  bucketName: cfg.bucketName,\n  region: cfg.region,\n  accessKeyId: cfg.accessKeyId,\n  secretAccessKey: cfg.secretKey,\n  endpoint: cfg.endpoint,\n};\n\nfunction pad2(n) {\n  return String(n).padStart(2, '0');\n}\n\nfunction getIso8601Date() {\n  const d = new Date();\n  return (\n    d.getUTCFullYear() +\n    pad2(d.getUTCMonth() + 1) +\n    pad2(d.getUTCDate()) +\n    'T' +\n    pad2(d.getUTCHours()) +\n    pad2(d.getUTCMinutes()) +\n    pad2(d.getUTCSeconds()) +\n    'Z'\n  );\n}\n\nfunction getDateStamp() {\n  const d = new Date();\n  return d.getUTCFullYear() + pad2(d.getUTCMonth() + 1) + pad2(d.getUTCDate());\n}\n\nfunction sha256Hex(data) {\n  return crypto.createHash('sha256').update(data, 'utf8').digest('hex');\n}\n\nfunction calculateContentMd5(body) {\n  return crypto.createHash('md5').update(body, 'utf8').digest('base64');\n}\n\nfunction hmacSha256(key, data) {\n  return crypto.createHmac('sha256', key).update(data, 'utf8').digest();\n}\n\nfunction getSigningKey(secretKey, dateStamp, region) {\n  const kDate = hmacSha256(secretKey, dateStamp);\n  const kRegion = hmacSha256(kDate, region);\n  const kService = hmacSha256(kRegion, 'tos');\n  return hmacSha256(kService, 'request');\n}\n\nfunction createCanonicalRequest(method, uri, queryString, headers, payloadHash) {\n  const sortedKeys = Object.keys(headers).sort();\n\n  let canonical = '';\n  canonical += method + '\\n';\n  canonical += uri + '\\n';\n  canonical += queryString + '\\n';\n\n  const signedHeaders = [];\n  for (const key of sortedKeys) {\n    canonical += key.toLowerCase() + ':' + String(headers[key]).trim() + '\\n';\n    signedHeaders.push(key.toLowerCase());\n  }\n  canonical += '\\n';\n\n  canonical += signedHeaders.join(';') + '\\n';\n  canonical += payloadHash;\n\n  return { canonicalRequest: canonical, signedHeaders: signedHeaders.join(';') };\n}\n\nfunction createStringToSign(tosDate, dateStamp, region, canonicalRequest) {\n  const credentialScope = `${dateStamp}/${region}/tos/request`;\n\n  let stringToSign = 'TOS4-HMAC-SHA256\\n';\n  stringToSign += tosDate + '\\n';\n  stringToSign += credentialScope + '\\n';\n  stringToSign += sha256Hex(canonicalRequest);\n\n  return { stringToSign, credentialScope };\n}\n\nfunction generateAuthorizationHeader(accessKey, credentialScope, signedHeaders, signature) {\n  return `TOS4-HMAC-SHA256 Credential=${accessKey}/${credentialScope}, SignedHeaders=${signedHeaders}, Signature=${signature}`;\n}\n\nfunction getDeleteParams(objectKeys, quiet = false) {\n  if (!Array.isArray(objectKeys) || objectKeys.length === 0) {\n    throw new Error('object_keys 必须是非空列表');\n  }\n\n  const tosDate = getIso8601Date();\n  const dateStamp = getDateStamp();\n\n  const requestBody = {\n    Objects: objectKeys.map((key) => ({ Key: key })),\n    Quiet: quiet,\n  };\n\n  const bodyJson = JSON.stringify(requestBody);\n  const contentMd5 = calculateContentMd5(bodyJson);\n\n  const emptyPayloadHash = sha256Hex('');\n\n  const host = `${CONFIG.bucketName}.${CONFIG.endpoint}`;\n\n  const canonicalHeaders = {\n    'content-md5': contentMd5,\n    'content-type': 'application/json',\n    host,\n    'x-tos-date': tosDate,\n  };\n\n  const { canonicalRequest, signedHeaders } = createCanonicalRequest(\n    'POST',\n    '/',\n    'delete=',\n    canonicalHeaders,\n    emptyPayloadHash\n  );\n\n  const { stringToSign, credentialScope } = createStringToSign(\n    tosDate,\n    dateStamp,\n    CONFIG.region,\n    canonicalRequest\n  );\n\n  const signingKey = getSigningKey(CONFIG.secretAccessKey, dateStamp, CONFIG.region);\n  const signature = crypto.createHmac('sha256', signingKey).update(stringToSign, 'utf8').digest('hex');\n\n  const authorization = generateAuthorizationHeader(CONFIG.accessKeyId, credentialScope, signedHeaders, signature);\n\n  const url = `https://${host}/?delete`;\n\n  const headers = {\n    'Content-Type': 'application/json',\n    'Content-MD5': contentMd5,\n    'x-tos-date': tosDate,\n    Authorization: authorization,\n  };\n\n  return { url, method: 'POST', headers, body: bodyJson };\n}\n\n// 尝试获取要删除的文件key，处理节点未执行的情况\nconst keysToDelete = [];\n\ntry {\n  const key1 = $items('计算文件上传参数1')?.[0]?.json?.params?.formFields?.key;\n  if (key1) keysToDelete.push(key1);\n} catch (e) {\n  // 节点未执行，忽略\n}\n\ntry {\n  const key2 = $items('计算文件上传参数')?.[0]?.json?.params?.formFields?.key;\n  if (key2) keysToDelete.push(key2);\n} catch (e) {\n  // 节点未执行，忽略\n}\n\nif (keysToDelete.length === 0) {\n  // 没有文件需要删除，返回空操作\n  return { json: { message: 'No files to delete', skipped: true } };\n}\n\nconst params = getDeleteParams(keysToDelete, false);\nreturn { json: { params } };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13632,
+        8048
+      ],
+      "id": "d6fd78bc-1f7c-4f61-977a-22b271a63e76",
+      "name": "计算删除文件参数"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.data.video_url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        13216,
+        8048
+      ],
+      "id": "f39a1b43-4bcb-4741-b158-76fa2b49bf98",
+      "name": "视频下载",
+      "retryOnFail": true,
+      "waitBetweenTries": 5000,
+      "maxTries": 5
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.params.url }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-MD5",
+              "value": "={{ $json.params.headers['Content-MD5'] }}"
+            },
+            {
+              "name": "x-tos-date",
+              "value": "={{ $json.params.headers['x-tos-date'] }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "={{ $json.params.headers.Authorization }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.params.body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        13824,
+        8048
+      ],
+      "id": "67370c78-16d4-4c12-8738-5c0b35b59dd5",
+      "name": "删除火山引擎桶中的文件"
+    },
+    {
+      "parameters": {
+        "content": "配置及准备阶段",
+        "height": 80,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        11072,
+        7344
+      ],
+      "typeVersion": 1,
+      "id": "26e4fb04-2368-4419-a203-d5feec20d47b",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "生成模特图片",
+        "height": 80,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        11072,
+        7696
+      ],
+      "typeVersion": 1,
+      "id": "d62c4eda-09cf-45fa-afb3-597c894aae11",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "生成音频",
+        "height": 80,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        11072,
+        8128
+      ],
+      "typeVersion": 1,
+      "id": "5ebf8717-89ac-4bf4-abbb-b6d265faecd2",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "生成数字人视频",
+        "height": 80,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        11072,
+        8512
+      ],
+      "typeVersion": 1,
+      "id": "1d4271dc-0828-4b79-9cef-562494279806",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "video_ratio：视频比例，可选值：\n2:3\n3:2\n3:4\n4:3\n9:16\n16:9\n21:9\n9:21",
+        "height": 256,
+        "width": 256
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        11104,
+        7008
+      ],
+      "typeVersion": 1,
+      "id": "fbab6e99-06d1-4dd5-a254-d375408da211",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5.2",
+          "mode": "list",
+          "cachedResultName": "gpt-5.2"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        12928,
+        7120
+      ],
+      "id": "65d12c1e-4db9-4a59-b4e3-4d91f77595af",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "hBfygaoROeJa4XCw",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n\"model\": \"\",\n\"relation\": \"\",\n\"env\": \"\",\n\"light\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        13184,
+        7120
+      ],
+      "id": "860b5eee-c8a9-40bb-b9f9-7b83883422bf",
+      "name": "Structured Output Parser2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "211c53f9-ad95-4d9e-a9b7-4d858b894745",
+              "name": "data",
+              "value": "={{ $('配置字段').first().binary.data }}",
+              "type": "binary"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        14112,
+        7280
+      ],
+      "id": "a81e19ed-0099-470c-b616-6afa396ae86c",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=你是一名资深视觉导演 + 纪实摄影分镜策划 + AI 生图提示词专家。\n我将提供一张“老板正面照”的参考图。你的目标不是复刻构图，而是：\n1) 最大限度保留人物身份特征（年龄段、性别、肤色、发型发色、脸型轮廓、五官比例、气质、服装风格），\n2) 将画面重构为“适合作为数字人视频首帧”的纪实正脸素材：人物必须正脸直视镜头、双眼清晰可见、五官无遮挡（不被头发/口罩/手/帽檐遮挡），避免侧脸/背影/低头/仰头；表情自然克制（微笑或平静自信），不过度摆拍。\n3) 以“工厂纪实摄影”真实感为最高原则：自然光影、真实材质、无奇幻滤镜、无过度磨皮。\n\n请按以下步骤思考并只输出 JSON（严禁输出任何解释、标题、前后缀）：\n- 身份还原：从图中提取人物关键识别点（年龄段、性别、发型、面部特征、穿搭），用“可被镜头看到的直观描述”表达，避免修辞夸张与抽象词（例如不要写“势不可挡”“如蝼蚁般”一类）。:contentReference[oaicite:3]{index=3}\n- 场景延伸：基于工厂背景扩展真实工业环境（生产线/设备/货架/原料托盘/质检台/安全标识等），但背景不抢戏，人物为主。\n- 互动设计：设计一个自然、不摆拍的动作，让人物与设备/产品产生可信互动；动作要简单、明确、可直观拍到，不要量化到“转两圈”之类过严指令，偏向“缓慢/自然/轻微”等程度副词。:contentReference[oaicite:4]{index=4}\n- 正脸保障（必须写进描述里）：明确“正面胸像/半身像、人物居中、直视镜头、脸部清晰、无遮挡、单人入镜”。\n\n输出要求：\n- 只输出以下 4 个字段，键名必须完全一致：model / relation / env / light\n- 每个字段都写成可直接拼进生图 prompt 的中文短句（不要加引号外的任何内容；不要在字段末尾加句号；不要换行）\n- 不要出现“可能/大概/类似”等不确定词；不要出现品牌水印/文字标语\n\n\n产品图片：\n{{ $binary.data }}\n",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        12976,
+        6896
+      ],
+      "id": "04d42ba5-007e-499d-a856-b2d1b40c75c3",
+      "name": "prompt 生成"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const resp = $json;\n\n// 尝试获取音频URL，处理节点未执行的情况\nlet audioUrl = null;\ntry {\n  audioUrl = $items('音频字段整理')?.[0]?.json?.audio_url\n    || $items('音频字段整理')?.[0]?.json?.voice_url;\n} catch (e) {\n  // 音频字段整理节点未执行，忽略错误\n}\n\nif (!audioUrl) {\n  try {\n    audioUrl = $items('计算生成数字人任务参数')?.[0]?.json?.audio_url\n      || $items('计算生成数字人任务参数')?.[0]?.json?.voice_url;\n  } catch (e) {\n    // 忽略\n  }\n}\n\nfunction findFirstUrl(value, preferExt) {\n  if (!value) return null;\n  if (typeof value === 'string') {\n    const s = value.trim();\n    if (!/^https?:\\/\\//i.test(s)) return null;\n    if (preferExt) {\n      const lower = s.toLowerCase();\n      if (lower.includes(preferExt)) return s;\n    }\n    return s;\n  }\n  if (Array.isArray(value)) {\n    for (const v of value) {\n      const u = findFirstUrl(v, preferExt);\n      if (u) return u;\n    }\n    return null;\n  }\n  if (typeof value === 'object') {\n    const direct = value.video_url || value.videoUrl || value.url || value.href;\n    const u0 = findFirstUrl(direct, preferExt);\n    if (u0) return u0;\n    for (const k of Object.keys(value)) {\n      const u = findFirstUrl(value[k], preferExt);\n      if (u) return u;\n    }\n  }\n  return null;\n}\n\nconst rawStatus = resp.status || resp.data?.status || resp.state || resp.data?.state || resp.phase;\nlet status = String(rawStatus || '').toLowerCase();\nif (['done','succeeded','success','completed','complete','finished'].includes(status)) status = 'done';\nelse if (['failed','error','canceled','cancelled'].includes(status)) status = 'failed';\nelse status = status || 'running';\nif (status === 'failed') {\n  const err = resp.error || resp.data?.error || resp.err || {};\n  const code = err.code || err.Code || resp.code || resp.status_code || '';\n  const msg = err.message || err.Message || resp.message || resp.msg || '';\n  throw new Error(`Seedance task failed: ${code} ${msg}`.trim());\n}\n\n\nlet videoUrl = null;\n// Prefer mp4 urls\nvideoUrl = findFirstUrl(resp, '.mp4');\nif (!videoUrl) videoUrl = findFirstUrl(resp);\n\nreturn {\n  json: {\n    data: {\n      status,\n      video_url: status === 'done' ? videoUrl : undefined,\n      audio_url: audioUrl,\n    },\n    raw: resp,\n  },\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12720,
+        8064
+      ],
+      "id": "18951eb1-02f6-4bb9-b4fc-b3b60c780d7a",
+      "name": "Parse Seedance Result"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const current = $input.item;\nconst triggerItem = $items('When chat message received')?.[0];\n\nconst rawText = (\n  current?.json?.text ||\n  current?.json?.chatInput ||\n  triggerItem?.json?.text ||\n  triggerItem?.json?.chatInput ||\n  ''\n);\nconst text = String(rawText || '').trim();\n\nlet productName = current?.json?.product_name || current?.json?.productName || '';\nlet sellingPoints = current?.json?.core_selling_points || current?.json?.selling_points || current?.json?.coreSellingPoints || '';\n\nfunction normalizeLabelKey(s) {\n  return String(s || '').trim();\n}\n\nfunction pickValueAfterColon(str) {\n  const parts = String(str || '').split(/[:：]/);\n  if (parts.length < 2) return '';\n  return parts.slice(1).join(':').trim();\n}\n\nfunction parseOneLine(s) {\n  // 支持：产品：xxx 卖点：yyy / 名称：xxx 卖点：yyy / 产品/业务名称：xxx 核心卖点：yyy\n  const m = String(s || '').match(/(?:产品|业务|名称|产品\\/业务名称|产品名称|业务名称)\\s*[:：]\\s*(.*?)\\s*(?:核心卖点|卖点)\\s*[:：]\\s*(.+)$/);\n  if (!m) return null;\n  return { productName: (m[1] || '').trim(), sellingPoints: (m[2] || '').trim() };\n}\n\nif ((!productName || !sellingPoints) && text) {\n  // 1) JSON 输入\n  try {\n    const obj = JSON.parse(text);\n    productName = productName || obj.product_name || obj.productName || obj.product || obj.name || '';\n    sellingPoints = sellingPoints || obj.core_selling_points || obj.selling_points || obj.coreSellingPoints || obj.sellingPoint || obj.卖点 || '';\n  } catch (e) {\n    // ignore\n  }\n\n  // 2) 单行“产品：… 卖点：…”\n  if (!productName || !sellingPoints) {\n    const one = parseOneLine(text);\n    if (one) {\n      productName = productName || one.productName;\n      sellingPoints = sellingPoints || one.sellingPoints;\n    }\n  }\n\n  // 3) 多行解析\n  if (!productName || !sellingPoints) {\n    const lines = text.split(/\\r?\\n/).map(l => l.trim()).filter(Boolean);\n    for (const line of lines) {\n      if (!productName && /(产品|业务|名称).*(名称)?/.test(line)) {\n        const v = pickValueAfterColon(line);\n        if (v) productName = v;\n      }\n      if (!sellingPoints && /(核心卖点|卖点)/.test(line)) {\n        // 优先取“卖点：”之后的内容（如果同一行里还有“产品：”，上面单行解析已处理）\n        const v = pickValueAfterColon(line);\n        if (v) sellingPoints = v;\n      }\n    }\n  }\n}\n\nif (Array.isArray(sellingPoints)) sellingPoints = sellingPoints.join('；');\n\nproductName = normalizeLabelKey(productName);\nsellingPoints = normalizeLabelKey(sellingPoints);\n\nif (!productName || !sellingPoints) {\n  throw new Error('缺少“名称/卖点”。请在聊天里同时发文本，例如：\"名称：福耀玻璃\\n卖点：人工成本低\"，或同一行：\"产品：福耀玻璃 卖点：人工成本低\"');\n}\n\n// --- language parsing (optional) ---\nlet language = current?.json?.language || current?.json?.lang || current?.json?.locale || '';\n\nif (!language && text) {\n  // JSON input\n  try {\n    const obj = JSON.parse(text);\n    language = obj.language || obj.lang || obj.locale || obj.语言 || '';\n  } catch (e) {}\n\n  // Multi-line label input: ???xx / language: xx\n  if (!language) {\n    const lines = text.split(/\\r?\\n/).map(l => l.trim()).filter(Boolean);\n    for (const line of lines) {\n      if (/(?:语言|language|lang)/i.test(line)) {\n        const v = pickValueAfterColon(line);\n        if (v) { language = v; break; }\n      }\n    }\n  }\n}\n\nfunction normalizeLanguage(val) {\n  const s = String(val || '').trim().toLowerCase();\n  if (!s) return '';\n\n  // zh\n  if (s === 'zh' || s === 'cn') return 'zh';\n  if (/(?:中文|汉语|普通话|chinese|mandarin)/.test(s)) return 'zh';\n\n  // en\n  if (s === 'en' || /(?:english|英语|英文)/.test(s)) return 'en';\n\n  // ja\n  if (s === 'ja' || s === 'jp' || /(?:japanese|日语|日文)/.test(s)) return 'ja';\n\n  // ko\n  if (s === 'ko' || s === 'kr' || /(?:korean|韩语|韩文)/.test(s)) return 'ko';\n\n  // fallback: keep raw\n  return s;\n}\n\nlanguage = normalizeLanguage(language) || 'zh';\n\nreturn {\n  json: { ...current.json, product_name: productName, core_selling_points: sellingPoints, language },\n  binary: current.binary,\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        11824,
+        7296
+      ],
+      "id": "36935516-eb81-44d2-af52-0996a26a2d90",
+      "name": "解析输入字段"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const current = $input.item;\nconst triggerItems = $items('When chat message received') || [];\nconst triggerFirst = triggerItems[0];\n\nfunction getFirstBinaryEntry(binaryObj) {\n  if (!binaryObj) return null;\n  if (binaryObj.data) return binaryObj.data;\n  const keys = Object.keys(binaryObj);\n  if (!keys.length) return null;\n  return binaryObj[keys[0]];\n}\n\n// Try files array from trigger first\nconst files = triggerFirst?.json?.files;\nlet bossFileName = 'boss.jpg';\nlet bossBin = null;\n\nif (Array.isArray(files) && files.length) {\n  const bossFile = files[0];\n  bossFileName = bossFile.fileName || bossFile.name || bossFileName;\n  const binaryObj = triggerFirst?.binary || {};\n\n  const candidates = [\n    bossFile.binaryPropertyName,\n    bossFile.binaryProperty,\n    bossFile.name,\n    'data0',\n    'data',\n  ].filter(Boolean);\n\n  for (const k of candidates) {\n    if (binaryObj[k]) {\n      bossBin = binaryObj[k];\n      break;\n    }\n  }\n\n  if (!bossBin) bossBin = getFirstBinaryEntry(binaryObj);\n}\n\n// If still not found, assume trigger emits one item per file and boss is first\nif (!bossBin && triggerItems.length) {\n  bossBin = getFirstBinaryEntry(triggerItems[0].binary);\n  bossFileName = bossBin?.fileName || bossFileName;\n}\n\nif (!bossBin) throw new Error('Boss image binary not found.');\n\nreturn {\n  json: {\n    ...current.json,\n    boss_file_name: bossFileName,\n  },\n  binary: { data: bossBin },\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12704,
+        6896
+      ],
+      "id": "51afd820-2ba1-45a7-a72a-5911207ee9fc",
+      "name": "提取老板照片"
+    },
+    {
+      "parameters": {
+        "jsCode": "const inputItems = $input.all();\nconst firstInput = inputItems[0] || $input.item;\n\nconst productName = firstInput?.json?.product_name;\nconst sellingPoints = firstInput?.json?.core_selling_points;\n\nconst triggerItems = $items('When chat message received') || [];\nconst triggerFirst = triggerItems[0];\n\n// Prefer the trigger's files array if present\nlet files = triggerFirst?.json?.files;\n\nfunction getFirstBinaryEntry(binaryObj) {\n  if (!binaryObj) return null;\n  if (binaryObj.data) return binaryObj.data;\n  const keys = Object.keys(binaryObj);\n  if (!keys.length) return null;\n  return binaryObj[keys[0]];\n}\n\nfunction getBinaryFromTriggerIndex(idx) {\n  const ti = triggerItems[idx];\n  if (!ti) return null;\n  return getFirstBinaryEntry(ti.binary);\n}\n\nfunction getBinaryForFile(binaryObj, file, index) {\n  const candidates = [\n    file?.binaryPropertyName,\n    file?.binaryProperty,\n    file?.name,\n    `data${index}`,\n    'data',\n  ].filter(Boolean);\n\n  for (const k of candidates) {\n    if (binaryObj?.[k]) return binaryObj[k];\n  }\n\n  // If trigger emitted one item per file, try same index\n  const byIndex = getBinaryFromTriggerIndex(index);\n  if (byIndex) return byIndex;\n\n  // Last resort: any binary entry\n  return getFirstBinaryEntry(binaryObj);\n}\n\n// If no files array, assume trigger emits one item per file\nif (!Array.isArray(files) || files.length === 0) {\n  files = triggerItems\n    .map((ti, idx) => {\n      const bin = getFirstBinaryEntry(ti.binary);\n      const fileName = bin?.fileName || `image_${idx}.png`;\n      return {\n        fileName,\n        name: fileName,\n        binaryPropertyName: bin ? 'data' : undefined,\n        _idx: idx,\n      };\n    })\n    .filter((f) => f && (f.fileName || f.name));\n}\n\nif (!Array.isArray(files) || files.length < 3) {\n  throw new Error('Need 1 boss photo + 2-3 factory photos (total 3-4 images).');\n}\n\nconst maxFactory = 3;\nconst now = new Date();\nconst ts = now.toISOString().replace(/[-:.TZ]/g, '').slice(0, 14);\nconst out = [];\n\n// Use triggerFirst.binary when available, else empty\nconst triggerBinary = triggerFirst?.binary || {};\n\nfor (let i = 0; i < files.length; i++) {\n  if (i > maxFactory) break; // keep 1 boss + up to 3 factory\n  const file = files[i];\n  const role = i === 0 ? 'boss' : 'factory';\n\n  const indexHint = (typeof file._idx === 'number') ? file._idx : i;\n  const bin = getBinaryForFile(triggerBinary, file, indexHint);\n  if (!bin) throw new Error(`Image binary not found for index ${i}.`);\n\n  const rawName = file.fileName || file.name || `image_${i}.png`;\n  const safeName = rawName.replace(/[^a-zA-Z0-9._-]/g, '_');\n  const objectKey = `${role}_${ts}_${i}_${safeName}`;\n\n  out.push({\n    json: {\n      role,\n      fileName: rawName,\n      objectKey,\n      product_name: productName,\n      core_selling_points: sellingPoints,\n    },\n    binary: { data: bin },\n  });\n}\n\nreturn out;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        12192,
+        7296
+      ],
+      "id": "ef87e535-2933-4ba8-910c-3e40221edbce",
+      "name": "拆分图片上传"
+    },
+    {
+      "parameters": {
+        "jsCode": "const uploadItems = $input.all();\nconst metaItems = $items('拆分图片上传');\n\nif (!uploadItems.length) throw new Error('No upload results found.');\nif (!metaItems.length) throw new Error('No split metadata found from 节点“拆分图片上传”。');\n\nfunction findFirstUrl(value) {\n  if (!value) return null;\n  if (typeof value === 'string') {\n    const s = value.trim();\n    if (/^https?:\\/\\//i.test(s)) return s;\n    return null;\n  }\n  if (Array.isArray(value)) {\n    for (const v of value) {\n      const u = findFirstUrl(v);\n      if (u) return u;\n    }\n    return null;\n  }\n  if (typeof value === 'object') {\n    const direct = value.Location || value.location || value.url || value.image_url || value.imageUrl;\n    const u0 = findFirstUrl(direct);\n    if (u0) return u0;\n    for (const k of Object.keys(value)) {\n      const u = findFirstUrl(value[k]);\n      if (u) return u;\n    }\n  }\n  return null;\n}\n\n// Combine per-item: keep upload response + role/objectKey/product fields from split step\nconst combined = uploadItems.map((u, idx) => {\n  const meta = metaItems[idx]?.json || {};\n  return {\n    json: {\n      ...meta,\n      ...u.json,\n    },\n  };\n});\n\nconst bossItem = combined.find(i => i.json.role === 'boss') || combined.find(i => String(i.json.objectKey || '').startsWith('boss_'));\nif (!bossItem) throw new Error('Boss photo upload not found.');\nconst bossUrl = findFirstUrl(bossItem.json);\nif (!bossUrl) throw new Error('Boss photo URL not found in upload response.');\n\nconst factoryItems = combined.filter(i => i.json.role === 'factory' || String(i.json.objectKey || '').startsWith('factory_'));\nconst factoryUrls = factoryItems.map(i => findFirstUrl(i.json)).filter(Boolean);\nif (factoryUrls.length < 2) throw new Error('Need at least 2 factory photo URLs.');\n\nconst productName = bossItem.json.product_name || combined[0]?.json?.product_name || '';\nconst sellingPoints = bossItem.json.core_selling_points || combined[0]?.json?.core_selling_points || '';\n\nreturn {\n  json: {\n    boss_img_url: bossUrl,\n    factory_img_urls: factoryUrls,\n    product_name: productName,\n    core_selling_points: sellingPoints,\n  },\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        13312,
+        7296
+      ],
+      "id": "0e4f581c-baf1-4bb4-b2e5-43d0e866f94c",
+      "name": "汇总图片地址"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"voice_text\": \"\"\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        12448,
+        7056
+      ],
+      "id": "9e5c4d8e-65a2-4e89-8d76-17aab2b40187",
+      "name": "Structured Output Parser3"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are a short-video voice-over copywriter. Generate a ~10s voice-over script.\n- Output language: {{ $json.language || 'zh' }} (zh=en/ja/ko supported)\n- If language is zh: write in Chinese (about 50 Chinese chars).\n- Otherwise: write in the specified language (about 35-45 words).\n- Tone: professional, confident, authentic (factory owner speaking).\n- Structure: include product/business name + core selling points; avoid exaggerated claims.\n- Output JSON only, key must be voice_text\n\nProduct/Business name:\n{{ $json.product_name }}\n\nCore selling points:\n{{ $json.core_selling_points }}",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        12240,
+        6896
+      ],
+      "id": "358ef215-a1d7-4598-8326-951467e5bd9a",
+      "name": "视频文案生成"
+    },
+    {
+      "parameters": {
+        "mode": "chooseBranch"
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 2.1,
+      "position": [
+        13760,
+        7280
+      ],
+      "id": "e739473b-6b58-44bd-b12c-633842911177",
+      "name": "等待两支完成"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-5.2",
+          "mode": "list",
+          "cachedResultName": "gpt-5.2"
+        },
+        "builtInTools": {},
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        12192,
+        7072
+      ],
+      "id": "16e9b843-5a27-4da4-875a-a1812c9b6116",
+      "name": "OpenAI Chat Model2",
+      "credentials": {
+        "openAiApi": {
+          "id": "hBfygaoROeJa4XCw",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "type": "string",
+              "name": "boss_img_url",
+              "id": "ea2f7d86-aab0-4337-be6e-0d7eac7b84c0",
+              "value": "={{ $('汇总图片地址').first().json.boss_img_url }}"
+            },
+            {
+              "type": "string",
+              "name": "factory_img_urls",
+              "id": "6e33618f-c628-4783-aae5-8077bdcbfb6a",
+              "value": "={{ JSON.stringify($('汇总图片地址').first().json.factory_img_urls) }}"
+            },
+            {
+              "type": "string",
+              "name": "product_name",
+              "id": "19dba0d6-0b49-420a-8fc4-eb7edcf5ac27",
+              "value": "={{ $('汇总图片地址').first().json.product_name }}"
+            },
+            {
+              "type": "string",
+              "name": "core_selling_points",
+              "id": "01547413-5a0c-4cf6-8244-452fa06c87af",
+              "value": "={{ $('汇总图片地址').first().json.core_selling_points }}"
+            },
+            {
+              "type": "string",
+              "name": "product_img_url",
+              "id": "b2cd5c5a-b131-4fd0-80dc-a20be8dd2f60",
+              "value": "={{ $('汇总图片地址').first().json.boss_img_url }}"
+            },
+            {
+              "type": "string",
+              "name": "person_prompt",
+              "id": "98d31375-4ea0-47ef-a3f4-a1134b6aad4e",
+              "value": "={{ $('模特prompt').first().json.person_prompt }}"
+            },
+            {
+              "type": "string",
+              "name": "voice_text",
+              "id": "bb2eef44-2eaf-4d45-bf83-1025918202ec",
+              "value": "={{ $('视频文案生成').first().json.output.voice_text }}"
+            },
+            {
+              "type": "string",
+              "name": "action_text",
+              "id": "2796785c-a596-40f6-8a2a-e984d22cb853",
+              "value": "={{ $('模特prompt').first().json.action_text }}"
+            },
+            {
+              "type": "string",
+              "name": "accessKeyId",
+              "id": "e6689ba4-1df2-427d-b25c-2768682c0a9c",
+              "value": "={{ $('配置字段').first().json.accessKeyId }}"
+            },
+            {
+              "type": "string",
+              "name": "secretKey",
+              "id": "a90cdded-8dfc-4785-b445-3f08f70c233b",
+              "value": "={{ $('配置字段').first().json.secretKey }}"
+            },
+            {
+              "type": "string",
+              "name": "video_ratio",
+              "id": "7f6f03e3-d18a-44cc-ad2e-53d302dd5279",
+              "value": "={{ $('配置字段').first().json.video_ratio }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        14448,
+        7280
+      ],
+      "id": "105146e1-deb3-4464-a752-c7b14823d242",
+      "name": "生图字段整理"
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('配置字段1').first().json.output_folder_path }}{{ $json.fileName }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        15936,
+        10080
+      ],
+      "id": "af1b7a54-489f-4268-974e-c3ecc649fbe8",
+      "name": "Read/Write Files from Disk1"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const crypto = require('crypto');\n\nconst cfg = $items('配置字段1')?.[0]?.json;\nif (!cfg) throw new Error('未找到节点“配置字段”的输出');\n\nconst required = ['bucketName', 'region', 'accessKeyId', 'secretKey', 'endpoint'];\nfor (const key of required) {\n  if (cfg[key] === undefined || cfg[key] === null || cfg[key] === '') {\n    throw new Error('缺少配置字段: ' + key);\n  }\n}\n\nconst objectKey = $items('生成音频文件名称1')[0].json.fileName;\nif (!objectKey) throw new Error('未找到节点“生成音频文件名称”的 fileName');\n\nconst CONFIG = {\n  bucketName: cfg.bucketName,\n  region: cfg.region,\n  accessKeyId: cfg.accessKeyId,\n  secretAccessKey: cfg.secretKey,\n  endpoint: cfg.endpoint,\n};\n\nfunction hmacSha256(key, data) {\n  return crypto.createHmac('sha256', key).update(data, 'utf8').digest();\n}\n\nfunction getSigningKey(secretKey, dateStamp, region) {\n  const kDate = hmacSha256(secretKey, dateStamp);\n  const kRegion = hmacSha256(kDate, region);\n  const kService = hmacSha256(kRegion, 'tos');\n  return hmacSha256(kService, 'request');\n}\n\nfunction pad2(n) {\n  return String(n).padStart(2, '0');\n}\n\nfunction getIso8601Date() {\n  const d = new Date();\n  return (\n    d.getUTCFullYear() +\n    pad2(d.getUTCMonth() + 1) +\n    pad2(d.getUTCDate()) +\n    'T' +\n    pad2(d.getUTCHours()) +\n    pad2(d.getUTCMinutes()) +\n    pad2(d.getUTCSeconds()) +\n    'Z'\n  );\n}\n\nfunction getDateStamp() {\n  const d = new Date();\n  return d.getUTCFullYear() + pad2(d.getUTCMonth() + 1) + pad2(d.getUTCDate());\n}\n\nfunction generatePolicy(bucketName, objectKeyPrefix, expirationDate, tosDate, credential) {\n  const policy = {\n    expiration: expirationDate,\n    conditions: [\n      { bucket: bucketName },\n      ['starts-with', '$key', objectKeyPrefix || ''],\n      ['content-length-range', 0, 104857600],\n      { 'x-tos-algorithm': 'TOS4-HMAC-SHA256' },\n      { 'x-tos-credential': credential },\n      { 'x-tos-date': tosDate },\n      { success_action_status: '201' },\n    ],\n  };\n\n  return Buffer.from(JSON.stringify(policy), 'utf8').toString('base64');\n}\n\nfunction generateSignature(policyBase64, signingKey) {\n  return crypto.createHmac('sha256', signingKey).update(policyBase64, 'utf8').digest('hex');\n}\n\nfunction getUploadParams(objectKey, options = {}) {\n  const tosDate = getIso8601Date();\n  const dateStamp = getDateStamp();\n  const credential = CONFIG.accessKeyId + '/' + dateStamp + '/' + CONFIG.region + '/tos/request';\n\n  const exp = new Date(Date.now() + 60 * 60 * 1000);\n  exp.setUTCMilliseconds(0);\n  const expirationDate = exp.toISOString().replace(/\\.[0-9]{3}Z$/, '.000Z');\n\n  const policy = generatePolicy(CONFIG.bucketName, objectKey, expirationDate, tosDate, credential);\n  const signingKey = getSigningKey(CONFIG.secretAccessKey, dateStamp, CONFIG.region);\n  const signature = generateSignature(policy, signingKey);\n\n  const uploadUrl = 'https://' + CONFIG.bucketName + '.' + CONFIG.endpoint + '/';\n\n  const formFields = {\n    key: objectKey,\n    success_action_status: '201',\n    'x-tos-algorithm': 'TOS4-HMAC-SHA256',\n    'x-tos-date': tosDate,\n    'x-tos-credential': credential,\n    policy,\n    'x-tos-signature': signature,\n  };\n\n  if (options.success_redirect) formFields.success_action_redirect = options.success_redirect;\n\n  if (options.metadata && typeof options.metadata === 'object') {\n    for (const [k, v] of Object.entries(options.metadata)) {\n      formFields['x-tos-meta-' + k] = v;\n    }\n  }\n\n  if (options.content_disposition) {\n    formFields['Content-Disposition'] = options.content_disposition;\n  }\n\n  return { url: uploadUrl, method: 'POST', formFields };\n}\n\nconst params = getUploadParams(objectKey);\nreturn { json: { params } };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        16128,
+        10080
+      ],
+      "id": "9febd33a-56aa-4dc5-a1a3-bf805b995246",
+      "name": "计算文件上传参数3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('计算文件上传参数3').item.json.params.url }}",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "key",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields.key }}"
+            },
+            {
+              "name": "success_action_status",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields.success_action_status }}"
+            },
+            {
+              "name": "x-tos-algorithm",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields['x-tos-algorithm'] }}"
+            },
+            {
+              "name": "x-tos-date",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields['x-tos-date'] }}"
+            },
+            {
+              "name": "x-tos-credential",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields['x-tos-credential'] }}"
+            },
+            {
+              "name": "policy",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields.policy }}"
+            },
+            {
+              "name": "x-tos-signature",
+              "value": "={{ $('计算文件上传参数3').first().json.params.formFields['x-tos-signature'] }}"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        16544,
+        10080
+      ],
+      "id": "4b6754fa-3b57-4f03-bab5-68aa719b7161",
+      "name": "上传音频1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "f24e0761-b4cd-4ab2-a557-81586ba019e4",
+              "name": "voice_url",
+              "value": "={{ $('上传音频1').first().json.Location }}",
+              "type": "string"
+            },
+            {
+              "id": "e7c8bb14-7f71-48e8-bfcc-c92fc684ba78",
+              "name": "audio_url",
+              "value": "={{ $('上传音频1').first().json.Location }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        17088,
+        10064
+      ],
+      "id": "1c21c277-9b42-494b-83f2-15c64aee4e33",
+      "name": "音频字段整理1"
+    },
+    {
+      "parameters": {
+        "message": "=图片地址：{{ $('模特字段整理1').first().json.person_img_url }}\n音频文件地址：{{ $json.Location }}\n请确认，回复1后开始生成视频",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1,
+      "position": [
+        16720,
+        10080
+      ],
+      "id": "4f2caf29-52de-4802-a7c9-3b18f1aeecd7",
+      "name": "Respond to Chat1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "5ecdcb30-7a5f-493e-af52-772e56dcf318",
+              "leftValue": "={{ $json.chatInput }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        16896,
+        10080
+      ],
+      "id": "2353bd71-3723-4df3-b9a3-885dd62d1334",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "fileSelector": "={{ $('配置字段1').first().json.output_folder_path }}{{ $('生成音频文件名称1').first().json.fileName }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        16352,
+        10080
+      ],
+      "id": "b6f6aaf1-c4bc-4c9f-9946-67eddbcf8d6f",
+      "name": "Read/Write Files from Disk3"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Parse BytePlus Voice TTS unidirectional streaming response (multiple JSON objects)\nconst item = $input.item;\n\nfunction asString(val) {\n  if (val === null || val === undefined) return '';\n  if (typeof val === 'string') return val;\n  if (Buffer.isBuffer(val)) return val.toString('utf8');\n  try { return JSON.stringify(val); } catch { return String(val); }\n}\n\n// n8n HTTP Request (responseFormat=text) usually returns { body: '...' }\nconst raw = item.json?.body ?? item.json?.data ?? item.json;\nconst text = asString(raw);\n\nif (!text.trim()) {\n  throw new Error('SeedSpeech TTS response body is empty.');\n}\n\nfunction extractJsonStrings(s) {\n  const out = [];\n  let depth = 0;\n  let start = -1;\n  let inStr = false;\n  let esc = false;\n  for (let i = 0; i < s.length; i++) {\n    const ch = s[i];\n    if (inStr) {\n      if (esc) {\n        esc = false;\n      } else if (ch === '\\\\') {\n        esc = true;\n      } else if (ch === '\"') {\n        inStr = false;\n      }\n      continue;\n    }\n    if (ch === '\"') {\n      inStr = true;\n      continue;\n    }\n    if (ch === '{') {\n      if (depth === 0) start = i;\n      depth++;\n      continue;\n    }\n    if (ch === '}') {\n      if (depth > 0) depth--;\n      if (depth === 0 && start !== -1) {\n        out.push(s.slice(start, i + 1));\n        start = -1;\n      }\n    }\n  }\n  return out;\n}\n\nlet objs = [];\nconst jsonStrs = extractJsonStrings(text);\nfor (const js of jsonStrs) {\n  try {\n    objs.push(JSON.parse(js));\n  } catch (e) {\n    // ignore parse errors for partial chunks\n  }\n}\n\n// Fallback: maybe it's a single JSON\nif (!objs.length) {\n  try { objs = [JSON.parse(text)]; } catch (e) {}\n}\n\nif (!objs.length) {\n  throw new Error('Failed to parse any JSON objects from SeedSpeech streaming response.');\n}\n\nconst buffers = [];\nlet sawEnd = false;\n\nfor (const o of objs) {\n  const code = o?.code;\n  if (code === 0 && typeof o.data === 'string' && o.data) {\n    try {\n      buffers.push(Buffer.from(o.data, 'base64'));\n    } catch (e) {\n      // ignore invalid b64\n    }\n    continue;\n  }\n  if (code === 20000000) {\n    sawEnd = true;\n    break;\n  }\n  // other error codes\n  if (code && code !== 0 && code !== 20000000) {\n    throw new Error(`SeedSpeech TTS error code=${code}: ${o.message || o.msg || ''}`.trim());\n  }\n}\n\nif (!buffers.length) {\n  // Sometimes the response might be {code:0,data:...} only once\n  const first = objs.find(o => o && typeof o.data === 'string' && o.data);\n  if (first) buffers.push(Buffer.from(first.data, 'base64'));\n}\n\nif (!buffers.length) {\n  throw new Error('No base64 audio chunks found in SeedSpeech response.');\n}\n\nconst audio = Buffer.concat(buffers);\n\nreturn {\n  json: {\n    chunks: buffers.length,\n    bytes: audio.length,\n    stream_end: sawEnd,\n  },\n  binary: {\n    data: {\n      data: audio.toString('base64'),\n      mimeType: 'audio/mpeg',\n      fileName: 'tts.mp3',\n    },\n  },\n};\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        15696,
+        10080
+      ],
+      "id": "a2568c4b-1695-4546-99b6-ecd7ac2e37d5",
+      "name": "Assemble SeedSpeech Audio1"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $('配置字段').first().json.ark_base_url }}/api/v3/contents/generations/tasks",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "={\"Content-Type\":\"application/json\",\"Authorization\":\"Bearer {{ $('配置字段').first().json.ark_api_key }}\"}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $('计算生成数字人任务参数').first().json.request_body }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        11840,
+        8288
+      ],
+      "id": "43743ea0-8477-4b5d-981c-ac26e90c1f8e",
+      "name": "发起生成数字人任务请求2",
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "options": {
+          "allowFileUploads": true,
+          "responseMode": "responseNodes"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        11424,
+        7296
+      ],
+      "id": "7513e647-ab25-43fb-a920-71cf8bc5d38f",
+      "name": "When chat message received",
+      "webhookId": "e6509351-8d0d-4e0c-9fdb-9c6a46b7f96e"
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $('配置字段').first().json.output_folder_path }}{{ $now.format('yyyy-MM-dd_hh_mm_ss') }}.mp4",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        13424,
+        8048
+      ],
+      "id": "ad3c6535-5b1c-41fc-aec2-c8cb4bb9fa0a",
+      "name": "Read/Write Files from Disk4"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "配置字段": {
+      "main": [
+        [
+          {
+            "node": "解析输入字段",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算文件上传参数": {
+      "main": [
+        [
+          {
+            "node": "上传产品图片",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "上传产品图片": {
+      "main": [
+        [
+          {
+            "node": "汇总图片地址",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算生成图片任务参数-模特": {
+      "main": [
+        [
+          {
+            "node": "请求参数整理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "请求参数整理": {
+      "main": [
+        [
+          {
+            "node": "发起生成图片任务请求-模特",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "发起生成图片任务请求-模特": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "计算查询图片任务参数-模特",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算查询图片任务参数-模特": {
+      "main": [
+        [
+          {
+            "node": "发起查询图片任务请求-模特",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "发起查询图片任务请求-模特": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "模特字段整理": {
+      "main": [
+        [
+          {
+            "node": "计算生成数字人任务参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "请求参数整理1": {
+      "main": [
+        [
+          {
+            "node": "发起生成数字人任务请求",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算生成数字人任务参数": {
+      "main": [
+        [
+          {
+            "node": "请求参数整理1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "发起生成数字人任务请求": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算查询数字人任务参数": {
+      "main": [
+        [
+          {
+            "node": "发起查询数字人任务请求",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "计算查询数字人任务参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "发起查询数字人任务请求": {
+      "main": [
+        [
+          {
+            "node": "Parse Seedance Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If3": {
+      "main": [
+        [
+          {
+            "node": "视频下载",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "模特字段整理",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频下载": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算删除文件参数": {
+      "main": [
+        [
+          {
+            "node": "删除火山引擎桶中的文件",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "prompt 生成",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser2": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "prompt 生成",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "prompt 生成": {
+      "main": [
+        [
+          {
+            "node": "模特prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Seedance Result": {
+      "main": [
+        [
+          {
+            "node": "If3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "提取老板照片": {
+      "main": [
+        [
+          {
+            "node": "prompt 生成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "拆分图片上传": {
+      "main": [
+        [
+          {
+            "node": "计算文件上传参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "汇总图片地址": {
+      "main": [
+        [
+          {
+            "node": "等待两支完成",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser3": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "视频文案生成",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "解析输入字段": {
+      "main": [
+        [
+          {
+            "node": "视频文案生成",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "拆分图片上传",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "模特prompt": {
+      "main": [
+        [
+          {
+            "node": "等待两支完成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "生图字段整理",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "视频文案生成": {
+      "main": [
+        [
+          {
+            "node": "提取老板照片",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "等待两支完成": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "视频文案生成",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "生图字段整理": {
+      "main": [
+        [
+          {
+            "node": "计算生成图片任务参数-模特",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk1": {
+      "main": [
+        [
+          {
+            "node": "计算文件上传参数3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "计算文件上传参数3": {
+      "main": [
+        [
+          {
+            "node": "Read/Write Files from Disk3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "上传音频1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Chat1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Respond to Chat1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "音频字段整理1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk3": {
+      "main": [
+        [
+          {
+            "node": "上传音频1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Assemble SeedSpeech Audio1": {
+      "main": [
+        [
+          {
+            "node": "计算文件上传参数3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "配置字段",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read/Write Files from Disk4": {
+      "main": [
+        [
+          {
+            "node": "计算删除文件参数",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "availableInMCP": false
+  },
+  "versionId": "1df7d6c1-3fd7-4663-8151-de66cac3d738",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "335cdab80a28b063ddd00f3826a26ad4ae24c19ef973a7d46f87de2f42d5eddf"
+  },
+  "id": "Om6gueSngwel8bKr4Tl0E",
+  "tags": []
+}

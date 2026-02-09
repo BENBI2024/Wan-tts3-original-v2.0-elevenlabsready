@@ -1,0 +1,225 @@
+{
+  "common": {
+    "views": "Views",
+    "copies": "Copies",
+    "collapse": "Collapse",
+    "expand": "Expand",
+    "profile": "Profile",
+    "billing": "Billing",
+    "team": "Team",
+    "logout": "Log out",
+    "uploaded": "Uploaded",
+    "back": "Back"
+  },
+  "modules": {
+    "geoInsights": "GEO Insights",
+    "llmConsole": "LLM Console",
+    "aiToolbox": "AI Toolbox"
+  },
+  "sidebar": {
+    "appPlaza": "App Plaza",
+    "marketInsights": "Market Insights",
+    "brandHealth": "Brand Health Diagnosis",
+    "tiktokInsights": "TikTok Social Insights",
+    "marketingPlanning": "Marketing Planning",
+    "campaignPlanner": "Campaign Planner",
+    "materialGeneration": "Material Generation",
+    "imageGeneration": "Image Generation",
+    "textToImage": "Text to Image",
+    "ecommerceAssets": "E-commerce Assets",
+    "referenceToImage": "Reference to Image",
+    "videoGeneration": "Video Generation",
+    "textToVideo": "Text to Video",
+    "videoReplication": "Video Replication",
+    "referenceToVideo": "Reference to Video",
+    "digitalHuman": "Digital Human",
+    "digitalHumanGen": "Digital Human Generator",
+    "publishingOperations": "Publishing Operations",
+    "socialMediaPublishing": "Social Media Publishing"
+  },
+  "appPlaza": {
+    "title": "App Plaza",
+    "subtitle": "Discover and explore AI-powered tools for your business",
+    "digitalHuman": {
+      "tag": "Digital Human",
+      "title": "Digital Human Generator",
+      "subtitle": "Digital Human",
+      "description": "Create realistic AI digital human avatars for videos and presentations"
+    },
+    "videoGen": {
+      "tag": "Video Generation",
+      "title": "Video Generation",
+      "subtitle": "Video Generation",
+      "description": "AI assistant helps you quickly generate professional video content"
+    },
+    "sections": {
+      "marketInsights": "Market Insights",
+      "marketingPlanning": "Marketing Planning",
+      "materialGeneration": "Material Generation",
+      "imageGeneration": "Image Generation",
+      "videoGeneration": "Video Generation",
+      "digitalHuman": "Digital Human"
+    },
+    "tools": {
+      "brandHealth": {
+        "title": "Brand Health Diagnosis",
+        "description": "Comprehensive brand health analysis, insight into market performance and consumer perception"
+      },
+      "campaignPlanner": {
+        "title": "Campaign Planner",
+        "description": "Intelligently generate marketing plans to improve marketing efficiency and effectiveness"
+      },
+      "textToImage": {
+        "title": "Text to Image",
+        "description": "Generate beautiful images from text descriptions"
+      },
+      "ecommerceAssets": {
+        "title": "E-commerce Assets",
+        "description": "One-click generation of e-commerce product images and advertising materials"
+      },
+      "referenceToImage": {
+        "title": "Reference to Image",
+        "description": "Generate new images based on reference library image styles"
+      },
+      "textToVideo": {
+        "title": "Text to Video",
+        "description": "Generate short videos from text descriptions"
+      },
+      "referenceToVideo": {
+        "title": "Reference to Video",
+        "description": "Generate new videos based on reference library video styles"
+      },
+      "digitalHumanGen": {
+        "title": "Digital Human Generator",
+        "description": "Create realistic AI digital human avatars"
+      }
+    }
+  },
+  "textToImage": {
+    "title": "Text to Image",
+    "subtitle": "Enter a text description and AI will generate beautiful images for you",
+    "inputPlaceholder": "Describe the image you want to generate...",
+    "generate": "Generate Image",
+    "generating": "Generating...",
+    "generatedImages": "Generated Images",
+    "noImages": "No generated images yet",
+    "startPrompt": "Start entering prompts to generate your first image",
+    "status": {
+      "thinking": "Thinking...",
+      "analyzing": "Analyzing prompt...",
+      "designing": "Designing composition...",
+      "optimizing": "Optimizing details...",
+      "complete": "Generation complete"
+    },
+    "history": "History",
+    "images": "images",
+    "model": "Model",
+    "aspectRatio": "Aspect Ratio",
+    "style": "Style"
+  },
+  "llmConsole": {
+    "dashboard": "Dashboard",
+    "playground": "Playground",
+    "tokens": "Token Management",
+    "usage": "Usage Logs",
+    "wallet": "Wallet",
+    "profile": "Profile Settings"
+  },
+  "geoInsights": {
+    "dashboard": "Dashboard",
+    "writeArticle": "Write Article",
+    "myArticles": "My Articles",
+    "auditHistory": "Audit History",
+    "competitor": "Competitor Analysis",
+    "settings": "Settings"
+  },
+  "tiktokInsights": {
+    "title": "TikTok Social Insights",
+    "subtitle": "Analyze TikTok viral videos to discover market trends and selling point strategies",
+    "createTask": "Create Analysis Task",
+    "categoryLabel": "Category",
+    "categoryPlaceholder": "e.g., Beauty, Home",
+    "sellingPointsLabel": "Selling Points",
+    "sellingPointsPlaceholder": "e.g., Long-lasting oil control, Portable design",
+    "generateReport": "Generate Report",
+    "submitting": "Submitting...",
+    "taskSubmitted": "Task Submitted",
+    "taskSubmittedDesc": "You can check progress in the Task Center"
+  },
+  "tiktokReport": {
+    "title": "Viral Video Report",
+    "totalVideos": "Total Videos",
+    "avgViews": "Avg Views",
+    "avgLikes": "Avg Likes",
+    "avgConversion": "Avg Conversion",
+    "topAdsTitle": "High Engagement Content Analysis (TikTok Top Ads)",
+    "topAdsSubtitle": "Below are viral video analyses highly relevant to your category and selling points",
+    "likes": "Likes",
+    "keywords": "Video Analysis",
+    "strategy": "Strategy",
+    "sellingPointMatch": "Selling Point Match",
+    "replicateVideo": "Replicate",
+    "replicateToast": "Video selected, redirecting to Video Replication..."
+  },
+  "taskCenter": {
+    "title": "Task Center",
+    "clearCompleted": "Clear Completed",
+    "tabAll": "All",
+    "tabTikTok": "TikTok Insights",
+    "tabDigitalHuman": "Digital Human",
+    "tabOther": "Other",
+    "noTasks": "No tasks yet",
+    "statusGenerating": "Generating",
+    "statusCompleted": "Completed",
+    "statusFailed": "Failed",
+    "clickToView": "Click to view"
+  },
+  "digitalHuman": {
+    "title": "Digital Human Generator",
+    "subtitle": "Create realistic AI digital humans for professional video presentations",
+    "materialUpload": "Material Upload",
+    "uploadDescription": "Upload scene images and portrait photos as generation materials",
+    "sceneEnvironment": "Factory/Scene Environment",
+    "uploadScene": "Click to upload scene image",
+    "portraitPhoto": "Portrait Photo",
+    "uploadPortrait": "Click to upload portrait",
+    "scriptGeneration": "Script Generation",
+    "scriptDescription": "Fill in product details, AI generates the script automatically",
+    "productName": "Product Name",
+    "productNamePlaceholder": "Enter product name",
+    "language": "Language",
+    "sellingPoints": "Key Selling Points",
+    "sellingPointsPlaceholder": "Enter key selling points, one per line",
+    "generatePrompt": "Generate Prompt",
+    "generatingPrompt": "Generating...",
+    "generatedScript": "Generated Script",
+    "controlPreview": "Control & Preview",
+    "controlDescription": "Choose target platform and start generating digital human video",
+    "targetPlatform": "Target Platform",
+    "startGeneration": "Start Generation",
+    "previewPlaceholder": "Video will preview here after generation",
+    "promptError": "Please fill in product name and selling points",
+    "noPromptError": "Please generate a prompt first",
+    "promptGenerated": "Script generated successfully",
+    "taskPrefix": "Digital Human Video",
+    "untitled": "Untitled",
+    "taskSubmitted": "Task submitted, entering canvas mode...",
+    "nextStep": "Next Step",
+    "prevStep": "Previous",
+    "uploadAtLeastOne": "Please upload at least one image",
+    "generatePromptFirst": "Please generate a script first",
+    "summary": "Generation Summary",
+    "materials": "Materials",
+    "scene": "Scene",
+    "portrait": "Portrait"
+  },
+  "videoCanvas": {
+    "title": "Video Canvas",
+    "taskDetails": "Task Details",
+    "materials": "Uploaded Materials",
+    "noMaterials": "No materials uploaded",
+    "videosCount": "videos",
+    "generating": "Generating...",
+    "completed": "Completed"
+  }
+}
