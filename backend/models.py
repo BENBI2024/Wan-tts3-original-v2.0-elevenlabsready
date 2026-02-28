@@ -1,129 +1,155 @@
-"""数据模型定义"""
-from pydantic import BaseModel, Field
-from typing import List, Optional, Literal
+﻿"""Data models."""
 from enum import Enum
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
 
 
 class LanguageEnum(str, Enum):
-    """支持的语言 - 包含方言和多种语言"""
-    ZH = "zh"  # 普通话
-    ZH_SHAANXI = "zh-shaanxi"  # 陕西话
-    ZH_SICHUAN = "zh-sichuan"  # 四川话
-    EN = "en"  # 英语
-    JA = "ja"  # 日语
-    KO = "ko"  # 韩语
-    ES = "es"  # 西班牙语
-    ID = "id"  # 印尼语
+    ZH = "zh"
+    EN = "en"
 
 
 class PlatformEnum(str, Enum):
-    """目标平台"""
     TIKTOK = "tiktok"
     INSTAGRAM = "instagram"
 
 
 class TaskStatus(str, Enum):
-    """任务状态"""
     PENDING = "pending"
     UPLOADING = "uploading"
     GENERATING_SCRIPT = "generating_script"
     GENERATING_IMAGE = "generating_image"
     GENERATING_AUDIO = "generating_audio"
+    AUDIO_READY = "audio_ready"
     GENERATING_VIDEO = "generating_video"
     COMPLETED = "completed"
     FAILED = "failed"
 
 
-# ===== 请求模型 =====
+class TTSEngineEnum(str, Enum):
+    MEGA_TTS3 = "mega_tts3"
+
+
+class DurationModeEnum(str, Enum):
+    FOLLOW_AUDIO = "follow_audio"
+    FIXED = "fixed"
+
+
+class AudioSourceEnum(str, Enum):
+    AUTO = "auto"
+    EXISTING_GENERATED = "existing_generated"
+
+
+class ScriptModeEnum(str, Enum):
+    LLM = "llm"
+    MANUAL = "manual"
+
 
 class MaterialUploadRequest(BaseModel):
-    """素材上传请求 - 步骤1"""
-    pass  # 文件通过 multipart/form-data 上传
+    pass
 
 
 class ScriptGenerationRequest(BaseModel):
-    """脚本生成请求 - 步骤2"""
-    product_name: str = Field(..., description="产品/业务名称")
-    core_selling_points: str = Field(..., description="核心卖点")
+    product_name: str = Field(default="", description="介绍主体")
+    core_selling_points: str = Field(default="", description="核心信息")
     language: LanguageEnum = Field(default=LanguageEnum.ZH, description="输出语言")
 
 
 class DigitalHumanRequest(BaseModel):
-    """数字人生成完整请求 - 步骤3 (启动生成)"""
     task_id: str = Field(..., description="任务ID")
     platform: PlatformEnum = Field(default=PlatformEnum.TIKTOK, description="目标平台")
 
 
 class StartGenerationRequest(BaseModel):
-    """开始视频生成请求"""
     task_id: str = Field(..., description="任务ID")
 
 
-# ===== 响应模型 =====
+class AudioGenerationResponse(BaseModel):
+    task_id: str
+    audio_url: str
+    audio_duration_sec: float
+    tts_engine_used: TTSEngineEnum
+    fallback_used: bool = False
+    message: str = "音频生成成功"
+
 
 class MaterialUploadResponse(BaseModel):
-    """素材上传响应"""
     task_id: str
-    scene_images: List[str] = []  # 场景图片URL列表 (支持2张)
-    portrait_image: Optional[str] = None  # 人物照片URL (1张)
+    scene_images: List[str] = []
+    portrait_image: Optional[str] = None
     message: str = "素材上传成功"
 
 
 class ScriptGenerationResponse(BaseModel):
-    """脚本生成响应"""
     task_id: str
-    voice_text: str  # 生成的口播文案
-    person_prompt: str  # 模特图片生成prompt
-    action_text: str  # 视频动作描述
+    voice_text: str
+    person_prompt: str
+    action_text: str
     message: str = "脚本生成成功"
 
 
 class TaskStatusResponse(BaseModel):
-    """任务状态响应"""
     task_id: str
     status: TaskStatus
-    progress: float = 0  # 0-100
+    progress: float = 0
     current_step: str = ""
     result: Optional[dict] = None
     error: Optional[str] = None
+    error_code: Optional[str] = None
 
 
 class DigitalHumanResult(BaseModel):
-    """数字人生成结果"""
     task_id: str
     video_url: Optional[str] = None
     audio_url: Optional[str] = None
     model_image_url: Optional[str] = None
+    final_audio_url: Optional[str] = None
+    audio_duration_sec: Optional[float] = None
+    tts_engine_used: Optional[TTSEngineEnum] = None
+    audio_source: Optional[AudioSourceEnum] = None
+    video_provider: Optional[str] = None
     status: TaskStatus
     message: str = ""
 
 
-# ===== 内部数据模型 =====
-
 class TaskData(BaseModel):
-    """任务完整数据"""
     task_id: str
     status: TaskStatus = TaskStatus.PENDING
     progress: float = 0
     current_step: str = ""
     error: Optional[str] = None
-    
-    # 素材数据
-    scene_images: List[str] = []  # 场景图片URL (最多2张)
-    portrait_image: Optional[str] = None  # 人物照片URL
-    
-    # 脚本数据
+    error_code: Optional[str] = None
+
+    scene_images: List[str] = []
+    portrait_image: Optional[str] = None
+
     product_name: str = ""
     core_selling_points: str = ""
     language: LanguageEnum = LanguageEnum.ZH
-    voice_text: str = ""  # 口播文案
-    person_prompt: str = ""  # 模特生成prompt
-    action_text: str = ""  # 动作描述
-    
-    # 平台选择
+    script_mode: ScriptModeEnum = ScriptModeEnum.MANUAL
+    voice_text: str = ""
+    person_prompt: str = ""
+    action_text: str = ""
+    image_prompt_fields: Optional[dict] = None
+    image_prompt_raw_response: Optional[str] = None
+    image_prompt_generated_at: Optional[str] = None
+
     platform: PlatformEnum = PlatformEnum.TIKTOK
-    
-    # 生成结果
-    model_image_url: Optional[str] = None  # 生成的模特图片
-    audio_url: Optional[str] = None  # 生成的音频
-    video_url: Optional[str] = None  # 最终视频
+
+    tts_engine_used: Optional[TTSEngineEnum] = None
+    final_audio_url: Optional[str] = None
+    audio_duration_sec: Optional[float] = None
+    duration_mode: DurationModeEnum = DurationModeEnum.FOLLOW_AUDIO
+    fixed_duration_sec: Optional[int] = None
+    audio_source: AudioSourceEnum = AudioSourceEnum.AUTO
+    video_provider: str = "infinitetalk"
+    comfy_prompt_id: Optional[str] = None
+    runninghub_audio_task_id: Optional[str] = None
+    runninghub_video_task_id: Optional[str] = None
+    aspect_ratio_applied: Optional[str] = None
+
+    model_image_url: Optional[str] = None
+    seedream_reference_image_url: Optional[str] = None
+    audio_url: Optional[str] = None
+    video_url: Optional[str] = None

@@ -55,10 +55,10 @@ echo.
 echo ====================================
 echo Starting FastAPI Server
 echo ====================================
-echo Backend API: http://localhost:8000
-echo API Docs: http://localhost:8000/docs
+echo Backend API: http://localhost:8013
+echo API Docs: http://localhost:8013/docs
 echo.
 
-python -m uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+python -m uvicorn main:app --host 0.0.0.0 --port 8013 --reload
 
 pause

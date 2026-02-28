@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import runningHubIcon from '@/assets/runninghub-icon.svg';
 
 const moduleIcons: Record<ModuleType, React.ReactNode> = {
   'geo-insights': <BarChart3 className="w-4 h-4" />,
@@ -37,9 +38,7 @@ export function TopNav() {
     <header className="h-14 border-b border-border bg-background flex items-center justify-between px-4 top-0 z-50 fixed left-0 w-screen">
       {/* Left: Logo */}
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-lg bg-foreground flex items-center justify-center">
-          <span className="text-background font-bold text-sm">S</span>
-        </div>
+        <img src={runningHubIcon} alt="RunningHub" className="w-8 h-8 rounded-lg" />
         <span className="font-semibold text-lg">SuperApp</span>
       </div>
 

@@ -41,9 +41,13 @@ interface CanvasVideo {
   status: 'generating' | 'completed' | 'failed';
   position: { x: number; y: number };
   size: { width: number; height: number };
-  aspectRatio: '16:9' | '9:16';
+  aspectRatio: '16:9' | '9:16' | '1:1';
   thumbnailUrl?: string;
   videoUrl?: string;
+  audioUrl?: string;
+  ttsEngineUsed?: string;
+  audioSource?: string;
+  audioDurationSec?: number;
   progress?: number;
   currentStep?: string;
   error?: string;
@@ -69,9 +73,9 @@ export function VideoCanvas({ taskId, taskData, onBack }: VideoCanvasProps) {
 
   // Initialize with the current task
   useEffect(() => {
-    const aspectRatio = taskData.platform === 'tiktok' ? '9:16' : '16:9';
-    const initialWidth = aspectRatio === '9:16' ? 192 : 288; // w-48 = 192px, w-72 = 288px
-    const initialHeight = aspectRatio === '9:16' ? 192 * (16/9) : 288 * (9/16);
+    const aspectRatio = taskData.platform === 'tiktok' ? '9:16' : '1:1';
+    const initialWidth = aspectRatio === '9:16' ? 192 : 256;
+    const initialHeight = aspectRatio === '9:16' ? 192 * (16 / 9) : 256;
 
     setVideos([{
       id: `video-${taskId}`,
@@ -121,6 +125,10 @@ export function VideoCanvas({ taskId, taskData, onBack }: VideoCanvasProps) {
               progress: status.progress,
               currentStep: status.current_step,
               videoUrl: status.result?.video_url,
+              audioUrl: status.result?.final_audio_url || status.result?.audio_url,
+              ttsEngineUsed: status.result?.tts_engine_used,
+              audioSource: status.result?.audio_source,
+              audioDurationSec: status.result?.audio_duration_sec,
               thumbnailUrl: status.result?.model_image_url || status.result?.video_url,
               error: status.error || undefined,
             };
@@ -343,6 +351,17 @@ export function VideoCanvas({ taskId, taskData, onBack }: VideoCanvasProps) {
                   </Badge>
                 </div>
 
+                <div>
+                  <h4 className="text-sm font-medium text-muted-foreground mb-2">
+                    音频信息
+                  </h4>
+                  <div className="text-sm text-foreground space-y-1">
+                    <p>来源: {videos[0]?.audioSource || taskData.audioSource || '-'}</p>
+                    <p>引擎: {videos[0]?.ttsEngineUsed || taskData.ttsEngineUsed || '-'}</p>
+                    <p>时长: {videos[0]?.audioDurationSec?.toFixed(2) || taskData.audioDurationSec?.toFixed(2) || '-'} 秒</p>
+                  </div>
+                </div>
+
                 {/* Generated Prompt */}
                 <div>
                   <h4 className="text-sm font-medium text-muted-foreground mb-2">
@@ -419,7 +438,12 @@ export function VideoCanvas({ taskId, taskData, onBack }: VideoCanvasProps) {
           >
             <AnimatePresence>
               {videos.map((video) => {
-                const aspectRatioValue = video.aspectRatio === '9:16' ? 9/16 : 16/9;
+                const aspectRatioValue =
+                  video.aspectRatio === '9:16'
+                    ? 9 / 16
+                    : video.aspectRatio === '1:1'
+                      ? 1
+                      : 16 / 9;
 
                 return (
                   <Draggable

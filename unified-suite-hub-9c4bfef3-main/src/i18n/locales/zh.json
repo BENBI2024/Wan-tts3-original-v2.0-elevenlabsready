@@ -1,241 +1,232 @@
-{
-  "common": {
-    "views": "浏览",
-    "copies": "复制",
-    "collapse": "收起",
-    "expand": "展开",
-    "profile": "个人资料",
-    "billing": "账单",
-    "team": "团队",
-    "logout": "退出登录",
-    "uploaded": "已上传",
-    "back": "返回"
-  },
-  "modules": {
-    "geoInsights": "GEO Insights",
-    "llmConsole": "LLM Console",
-    "aiToolbox": "AI Toolbox"
-  },
-  "sidebar": {
-    "appPlaza": "应用广场",
-    "marketInsights": "市场洞察",
-    "brandHealth": "品牌健康度诊断",
-    "tiktokInsights": "TikTok社媒洞察",
-    "marketingPlanning": "营销策划",
-    "campaignPlanner": "营销策划方案",
-    "materialGeneration": "素材生成",
-    "imageGeneration": "图片生成",
-    "textToImage": "文生图",
-    "ecommerceAssets": "电商素材图",
-    "referenceToImage": "素材库对标生图",
-    "videoGeneration": "视频生成",
-    "textToVideo": "文生视频",
-    "videoReplication": "复刻视频",
-    "referenceToVideo": "素材库对标生视频",
-    "digitalHuman": "数字人",
-    "digitalHumanGen": "数字人生成",
-    "publishingOperations": "投放运营",
-    "socialMediaPublishing": "社媒投放"
-  },
-  "appPlaza": {
-    "title": "应用广场",
-    "subtitle": "发现和探索AI智能工具，助力您的业务增长",
-    "digitalHuman": {
-      "tag": "数字人",
-      "title": "数字人生成",
-      "subtitle": "Digital Human",
-      "description": "创建逼真的AI数字人形象，用于视频和演示"
-    },
-    "videoGen": {
-      "tag": "视频生成",
-      "title": "视频生成",
-      "subtitle": "Video Generation",
-      "description": "AI助手帮您快速生成专业视频内容"
-    },
-    "sections": {
-      "marketInsights": "市场洞察",
-      "marketingPlanning": "营销策划",
-      "materialGeneration": "素材生成",
-      "imageGeneration": "图片生成",
-      "videoGeneration": "视频生成",
-      "digitalHuman": "数字人"
-    },
-    "tools": {
-      "brandHealth": {
-        "title": "品牌健康度诊断",
-        "description": "全面分析品牌健康状况，洞察市场表现与消费者认知"
-      },
-      "campaignPlanner": {
-        "title": "营销策划方案",
-        "description": "智能生成营销策划方案，提升营销效率与效果"
-      },
-      "textToImage": {
-        "title": "文生图",
-        "description": "根据文字描述生成精美图片"
-      },
-      "ecommerceAssets": {
-        "title": "电商素材图",
-        "description": "一键生成电商产品图和广告素材"
-      },
-      "referenceToImage": {
-        "title": "素材库对标生图",
-        "description": "参考素材库图片风格生成新图"
-      },
-      "textToVideo": {
-        "title": "文生视频",
-        "description": "根据文字描述生成短视频"
-      },
-      "referenceToVideo": {
-        "title": "素材库对标生视频",
-        "description": "参考素材库视频风格生成新视频"
-      },
-      "digitalHumanGen": {
-        "title": "数字人生成",
-        "description": "创建逼真的AI数字人形象"
-      }
-    }
-  },
-  "textToImage": {
-    "title": "文生图",
-    "subtitle": "输入文字描述，AI为您生成精美图片",
-    "inputPlaceholder": "发送指令，让遥鲟为您处理商品链接和图片",
-    "generate": "生成图片",
-    "generating": "生成中...",
-    "generatedImages": "生成的图片",
-    "noImages": "还没有生成的图片",
-    "startPrompt": "开始输入提示词来生成您的第一张图片",
-    "status": {
-      "thinking": "思考中...",
-      "analyzing": "图片理解",
-      "designing": "正在设计",
-      "optimizing": "优化细节...",
-      "complete": "任务已结束"
-    },
-    "history": "历史",
-    "images": "张图片",
-    "model": "模型",
-    "aspectRatio": "宽高比",
-    "style": "风格",
-    "workModes": {
-      "sceneFusion": "场景融合",
-      "textToImage": "文生图",
-      "styleTransfer": "风格迁移",
-      "imageEnhance": "图片增强"
-    },
-    "actions": {
-      "share": "分享",
-      "new": "新建",
-      "history": "历史",
-      "collapse": "收起",
-      "feedback": "反馈",
-      "add": "添加"
-    },
-    "enhanceMode": "增强模式",
-    "footerNote": "请使用有权素材，并合法使用生成结果"
-  },
-  "llmConsole": {
-    "dashboard": "仪表盘",
-    "playground": "Playground",
-    "tokens": "Token 管理",
-    "usage": "使用日志",
-    "wallet": "钱包",
-    "profile": "个人设置"
-  },
-  "geoInsights": {
-    "dashboard": "仪表盘",
-    "writeArticle": "撰写文章",
-    "myArticles": "我的文章",
-    "auditHistory": "审计历史",
-    "competitor": "竞争对手分析",
-    "settings": "设置"
-  },
-  "tiktokInsights": {
-    "title": "TikTok社媒洞察",
-    "subtitle": "分析TikTok爆款视频，洞察市场趋势与卖点策略",
-    "createTask": "创建分析任务",
-    "categoryLabel": "品类名",
-    "categoryPlaceholder": "如：美妆、家居",
-    "sellingPointsLabel": "商品卖点",
-    "sellingPointsPlaceholder": "如：长效控油、便携式设计",
-    "generateReport": "生成报告",
-    "submitting": "提交中...",
-    "taskSubmitted": "任务已提交",
-    "taskSubmittedDesc": "您可以在任务中心查看进度"
-  },
-  "tiktokReport": {
-    "title": "爆款视频报告",
-    "totalVideos": "爆款视频数",
-    "avgViews": "平均播放量",
-    "avgLikes": "平均点赞量",
-    "avgConversion": "平均转化率",
-    "topAdsTitle": "高互动素材解析 (TikTok Top Ads)",
-    "topAdsSubtitle": "以下是与您的品类和卖点高度相关的爆款视频分析",
-    "likes": "点赞",
-    "keywords": "视频解析",
-    "strategy": "策略",
-    "sellingPointMatch": "卖点命中率",
-    "replicateVideo": "一键复刻",
-    "replicateToast": "已选择视频，正在跳转到复刻视频..."
-  },
-  "taskCenter": {
-    "title": "任务中心",
-    "clearCompleted": "清空已完成",
-    "tabAll": "全部",
-    "tabTikTok": "TikTok洞察",
-    "tabDigitalHuman": "数字人",
-    "tabOther": "其他",
-    "noTasks": "暂无任务",
-    "statusGenerating": "生成中",
-    "statusCompleted": "已完成",
-    "statusFailed": "失败",
-    "clickToView": "点击查看"
-  },
-  "digitalHuman": {
-    "title": "数字人生成",
-    "subtitle": "创建逼真的AI数字人，一键生成专业口播视频",
-    "materialUpload": "素材上传",
-    "uploadDescription": "上传场景图片和人物照片作为生成素材",
-    "sceneEnvironment": "工厂/场景环境",
-    "uploadScene": "点击上传场景图片",
-    "portraitPhoto": "人物正面照",
-    "uploadPortrait": "点击上传人物照片",
-    "scriptGeneration": "脚本生成",
-    "scriptDescription": "填写产品信息，AI自动生成口播脚本",
-    "productName": "产品名称",
-    "productNamePlaceholder": "请输入产品名称",
-    "language": "语言",
-    "sellingPoints": "核心卖点",
-    "sellingPointsPlaceholder": "请输入产品核心卖点，每行一个",
-    "generatePrompt": "生成 Prompt",
-    "generatingPrompt": "生成中...",
-    "generatedScript": "生成的脚本",
-    "controlPreview": "控制与预览",
-    "controlDescription": "选择目标平台并开始生成数字人视频",
-    "targetPlatform": "适配平台",
-    "startGeneration": "开始生成",
-    "previewPlaceholder": "生成后视频将在此处预览",
-    "promptError": "请填写产品名称和卖点",
-    "noPromptError": "请先生成Prompt脚本",
-    "promptGenerated": "脚本生成成功",
-    "taskPrefix": "数字人视频",
-    "untitled": "未命名",
-    "taskSubmitted": "任务已提交，正在进入画布模式...",
-    "nextStep": "下一步",
-    "prevStep": "上一步",
-    "uploadAtLeastOne": "请至少上传一张图片",
-    "generatePromptFirst": "请先生成脚本",
-    "summary": "生成配置摘要",
-    "materials": "素材",
-    "scene": "场景",
-    "portrait": "人物"
-  },
-  "videoCanvas": {
-    "title": "视频画布",
-    "taskDetails": "任务详情",
-    "materials": "上传素材",
-    "noMaterials": "未上传素材",
-    "videosCount": "个视频",
-    "generating": "生成中...",
-    "completed": "已完成"
-  }
+﻿{
+    "common":  {
+                   "views":  "Views",
+                   "copies":  "Copies",
+                   "collapse":  "Collapse",
+                   "expand":  "Expand",
+                   "profile":  "Profile",
+                   "billing":  "Billing",
+                   "team":  "Team",
+                   "logout":  "Log out",
+                   "uploaded":  "Uploaded",
+                   "back":  "Back"
+               },
+    "modules":  {
+                    "geoInsights":  "GEO 洞察",
+                    "llmConsole":  "LLM 控制台",
+                    "aiToolbox":  "AI 工具箱"
+                },
+    "sidebar":  {
+                    "appPlaza":  "App Plaza",
+                    "marketInsights":  "Market Insights",
+                    "brandHealth":  "Brand Health Diagnosis",
+                    "tiktokInsights":  "TikTok Social Insights",
+                    "marketingPlanning":  "Marketing Planning",
+                    "campaignPlanner":  "Campaign Planner",
+                    "materialGeneration":  "Material Generation",
+                    "imageGeneration":  "Image Generation",
+                    "textToImage":  "Text to Image",
+                    "ecommerceAssets":  "E-commerce Assets",
+                    "referenceToImage":  "Reference to Image",
+                    "videoGeneration":  "Video Generation",
+                    "textToVideo":  "Text to Video",
+                    "videoReplication":  "Video Replication",
+                    "referenceToVideo":  "Reference to Video",
+                    "digitalHuman":  "Digital Human",
+                    "digitalHumanGen":  "Digital Human Generator",
+                    "publishingOperations":  "Publishing Operations",
+                    "socialMediaPublishing":  "Social Media Publishing"
+                },
+    "appPlaza":  {
+                     "title":  "App Plaza",
+                     "subtitle":  "Discover and explore AI-powered tools for your business",
+                     "digitalHuman":  {
+                                          "tag":  "Digital Human",
+                                          "title":  "Digital Human Generator",
+                                          "subtitle":  "Digital Human",
+                                          "description":  "Create realistic AI digital human avatars for videos and presentations"
+                                      },
+                     "videoGen":  {
+                                      "tag":  "Video Generation",
+                                      "title":  "Video Generation",
+                                      "subtitle":  "Video Generation",
+                                      "description":  "AI assistant helps you quickly generate professional video content"
+                                  },
+                     "sections":  {
+                                      "marketInsights":  "Market Insights",
+                                      "marketingPlanning":  "Marketing Planning",
+                                      "materialGeneration":  "Material Generation",
+                                      "imageGeneration":  "Image Generation",
+                                      "videoGeneration":  "Video Generation",
+                                      "digitalHuman":  "Digital Human"
+                                  },
+                     "tools":  {
+                                   "brandHealth":  {
+                                                       "title":  "Brand Health Diagnosis",
+                                                       "description":  "Comprehensive brand health analysis, insight into market performance and consumer perception"
+                                                   },
+                                   "campaignPlanner":  {
+                                                           "title":  "Campaign Planner",
+                                                           "description":  "Intelligently generate marketing plans to improve marketing efficiency and effectiveness"
+                                                       },
+                                   "textToImage":  {
+                                                       "title":  "Text to Image",
+                                                       "description":  "Generate beautiful images from text descriptions"
+                                                   },
+                                   "ecommerceAssets":  {
+                                                           "title":  "E-commerce Assets",
+                                                           "description":  "One-click generation of e-commerce product images and advertising materials"
+                                                       },
+                                   "referenceToImage":  {
+                                                            "title":  "Reference to Image",
+                                                            "description":  "Generate new images based on reference library image styles"
+                                                        },
+                                   "textToVideo":  {
+                                                       "title":  "Text to Video",
+                                                       "description":  "Generate short videos from text descriptions"
+                                                   },
+                                   "referenceToVideo":  {
+                                                            "title":  "Reference to Video",
+                                                            "description":  "Generate new videos based on reference library video styles"
+                                                        },
+                                   "digitalHumanGen":  {
+                                                           "title":  "Digital Human Generator",
+                                                           "description":  "Create realistic AI digital human avatars"
+                                                       }
+                               }
+                 },
+    "textToImage":  {
+                        "title":  "Text to Image",
+                        "subtitle":  "Enter a text description and AI will generate beautiful images for you",
+                        "inputPlaceholder":  "Describe the image you want to generate...",
+                        "generate":  "Generate Image",
+                        "generating":  "Generating...",
+                        "generatedImages":  "Generated Images",
+                        "noImages":  "No generated images yet",
+                        "startPrompt":  "Start entering prompts to generate your first image",
+                        "status":  {
+                                       "thinking":  "Thinking...",
+                                       "analyzing":  "Analyzing prompt...",
+                                       "designing":  "Designing composition...",
+                                       "optimizing":  "Optimizing details...",
+                                       "complete":  "Generation complete"
+                                   },
+                        "history":  "History",
+                        "images":  "images",
+                        "model":  "Model",
+                        "aspectRatio":  "Aspect Ratio",
+                        "style":  "Style"
+                    },
+    "llmConsole":  {
+                       "dashboard":  "Dashboard",
+                       "playground":  "Playground",
+                       "tokens":  "Token Management",
+                       "usage":  "Usage Logs",
+                       "wallet":  "Wallet",
+                       "profile":  "Profile Settings"
+                   },
+    "geoInsights":  {
+                        "dashboard":  "Dashboard",
+                        "writeArticle":  "Write Article",
+                        "myArticles":  "My Articles",
+                        "auditHistory":  "Audit History",
+                        "competitor":  "Competitor Analysis",
+                        "settings":  "Settings"
+                    },
+    "tiktokInsights":  {
+                           "title":  "TikTok Social Insights",
+                           "subtitle":  "Analyze TikTok viral videos to discover market trends and selling point strategies",
+                           "createTask":  "Create Analysis Task",
+                           "categoryLabel":  "Category",
+                           "categoryPlaceholder":  "e.g., Beauty, Home",
+                           "sellingPointsLabel":  "Selling Points",
+                           "sellingPointsPlaceholder":  "e.g., Long-lasting oil control, Portable design",
+                           "generateReport":  "Generate Report",
+                           "submitting":  "Submitting...",
+                           "taskSubmitted":  "Task Submitted",
+                           "taskSubmittedDesc":  "You can check progress in the Task Center"
+                       },
+    "tiktokReport":  {
+                         "title":  "Viral Video Report",
+                         "totalVideos":  "Total Videos",
+                         "avgViews":  "Avg Views",
+                         "avgLikes":  "Avg Likes",
+                         "avgConversion":  "Avg Conversion",
+                         "topAdsTitle":  "High Engagement Content Analysis (TikTok Top Ads)",
+                         "topAdsSubtitle":  "Below are viral video analyses highly relevant to your category and selling points",
+                         "likes":  "Likes",
+                         "keywords":  "Video Analysis",
+                         "strategy":  "Strategy",
+                         "sellingPointMatch":  "Selling Point Match",
+                         "replicateVideo":  "Replicate",
+                         "replicateToast":  "Video selected, redirecting to Video Replication..."
+                     },
+    "taskCenter":  {
+                       "title":  "Task Center",
+                       "clearCompleted":  "Clear Completed",
+                       "tabAll":  "All",
+                       "tabTikTok":  "TikTok Insights",
+                       "tabDigitalHuman":  "Digital Human",
+                       "tabOther":  "Other",
+                       "noTasks":  "No tasks yet",
+                       "statusGenerating":  "Generating",
+                       "statusCompleted":  "Completed",
+                       "statusFailed":  "Failed",
+                       "clickToView":  "Click to view"
+                   },
+    "digitalHuman":  {
+                         "title":  "数字人生成",
+                         "subtitle":  "创建逼真的AI数字人，一键生成专业口播视频",
+                         "materialUpload":  "Material Upload",
+                         "uploadDescription":  "Upload scene images and portrait photos as generation materials",
+                         "sceneEnvironment":  "Factory/Scene Environment",
+                         "uploadScene":  "Click to upload scene image",
+                         "portraitPhoto":  "Portrait Photo",
+                         "uploadPortrait":  "Click to upload portrait",
+                         "scriptGeneration":  "Script Generation",
+                         "scriptDescription":  "Fill in product details, AI generates the script automatically",
+                         "productName":  "介绍主体",
+                         "productNamePlaceholder":  "请输入介绍主体",
+                         "language":  "语言",
+                         "scriptMode":  "文案来源",
+                         "scriptModeLlm":  "LLM生成",
+                         "scriptModeManual":  "手动输入",
+                         "sellingPoints":  "核心信息",
+                         "sellingPointsPlaceholder":  "请输入核心信息，每行一个",
+                         "generatePrompt":  "生成脚本",
+                         "generatingPrompt":  "Generating...",
+                         "generatedScript":  "生成脚本（可编辑）",
+                         "generatedScriptPlaceholder":  "请先点击“生成脚本”，再按需修改文案",
+                         "audioPreview":  "Audio Preview",
+                         "audioDescription":  "Generate and preview audio, then optionally upload MP3 override before video generation",
+                         "controlPreview":  "Control \u0026 Preview",
+                         "controlDescription":  "Choose target platform and start generating digital human video",
+                         "targetPlatform":  "Target Platform",
+                         "startGeneration":  "开始生成",
+                         "previewPlaceholder":  "Video will preview here after generation",
+                         "promptError":  "LLM生成模式下，介绍主体和核心信息不能同时为空",
+                         "imagePromptIndependentHint":  "生图提示词会在“开始生成”时自动计算，与文案来源无关",
+                         "noPromptError":  "Please generate a prompt first",
+                         "promptGenerated":  "Script generated successfully",
+                         "taskPrefix":  "Digital Human Video",
+                         "untitled":  "Untitled",
+                         "taskSubmitted":  "Task submitted, entering canvas mode...",
+                         "nextStep":  "下一步",
+                         "prevStep":  "上一步",
+                         "uploadAtLeastOne":  "Please upload at least one image",
+                         "generatePromptFirst":  "请先生成脚本",
+                         "summary":  "Generation Summary",
+                         "materials":  "Materials",
+                         "scene":  "Scene",
+                         "portrait":  "Portrait"
+                     },
+    "videoCanvas":  {
+                        "title":  "Video Canvas",
+                        "taskDetails":  "Task Details",
+                        "materials":  "Uploaded Materials",
+                        "noMaterials":  "No materials uploaded",
+                        "videosCount":  "videos",
+                        "generating":  "Generating...",
+                        "completed":  "Completed"
+                    }
 }
