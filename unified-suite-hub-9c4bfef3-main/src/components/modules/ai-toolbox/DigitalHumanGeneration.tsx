@@ -1,4 +1,4 @@
-﻿import { useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -50,10 +50,15 @@ export function DigitalHumanGeneration({ onNavigate: _onNavigate, onEnterCanvas 
   const { t } = useTranslation();
   const { addTask } = useTaskCenter();
 
+  const maxSceneImages = 2;
+  const allowedImageTypes = new Set(['image/jpeg', 'image/png']);
+
   const [step, setStep] = useState<1 | 2 | 3>(1);
   const [taskId, setTaskId] = useState<string | null>(null);
   const [sceneImages, setSceneImages] = useState<ImageData[]>([]);
   const [portraitImage, setPortraitImage] = useState<ImageData | null>(null);
+  const [isSceneDragActive, setIsSceneDragActive] = useState(false);
+  const [isPortraitDragActive, setIsPortraitDragActive] = useState(false);
 
   const [productName, setProductName] = useState('');
   const [language, setLanguage] = useState<Language>('zh');
@@ -82,6 +87,50 @@ export function DigitalHumanGeneration({ onNavigate: _onNavigate, onEnterCanvas 
   const sceneInputRef = useRef<HTMLInputElement>(null);
   const portraitInputRef = useRef<HTMLInputElement>(null);
   const referenceAudioInputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    return () => {
+      sceneImages.forEach((image) => URL.revokeObjectURL(image.preview));
+      if (portraitImage) URL.revokeObjectURL(portraitImage.preview);
+    };
+  }, [sceneImages, portraitImage]);
+
+  const isAcceptedImage = (file: File) => {
+    if (allowedImageTypes.has(file.type)) return true;
+    const lowered = file.name.toLowerCase();
+    return lowered.endsWith('.jpg') || lowered.endsWith('.jpeg') || lowered.endsWith('.png');
+  };
+
+  const normalizeImageFiles = (files: File[]) => {
+    const valid = files.filter(isAcceptedImage);
+    if (valid.length !== files.length) {
+      toast.error('仅支持 JPG、PNG 格式');
+    }
+    return valid;
+  };
+
+  const setSceneFiles = (files: File[]) => {
+    const valid = normalizeImageFiles(files);
+    if (!valid.length) return;
+    if (valid.length > maxSceneImages) {
+      toast.error('场景图片最多上传2张');
+    }
+    const selected = valid.slice(0, maxSceneImages).map((file) => ({
+      file,
+      preview: URL.createObjectURL(file),
+    }));
+    setSceneImages(selected);
+  };
+
+  const setPortraitFile = (files: File[]) => {
+    const valid = normalizeImageFiles(files);
+    if (!valid.length) return;
+    if (valid.length > 1) {
+      toast.error('人物正面照仅支持1张');
+    }
+    const file = valid[0];
+    setPortraitImage({ file, preview: URL.createObjectURL(file) });
+  };
 
   const uploadMaterialsToBackend = async () => {
     setIsUploading(true);
@@ -184,10 +233,23 @@ export function DigitalHumanGeneration({ onNavigate: _onNavigate, onEnterCanvas 
   };
 
   const stepHeader = (
-    <div className="mb-4 flex gap-2 text-sm">
-      <Badge variant={step === 1 ? 'default' : 'secondary'}>1 素材</Badge>
-      <Badge variant={step === 2 ? 'default' : 'secondary'}>2 脚本</Badge>
-      <Badge variant={step === 3 ? 'default' : 'secondary'}>3 音频与生成</Badge>
+    <div className="mb-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+      {[
+        { key: 1, label: '素材上传' },
+        { key: 2, label: '脚本' },
+        { key: 3, label: '音频与生成' },
+      ].map((item) => (
+        <div key={item.key} className="flex items-center gap-2">
+          <span
+            className={`flex h-6 w-6 items-center justify-center rounded-full border text-xs font-semibold ${
+              step === item.key ? 'border-primary bg-primary text-primary-foreground' : 'border-border bg-background'
+            }`}
+          >
+            {item.key}
+          </span>
+          <span className={step === item.key ? 'text-foreground font-medium' : undefined}>{item.label}</span>
+        </div>
+      ))}
     </div>
   );
 
@@ -201,44 +263,164 @@ export function DigitalHumanGeneration({ onNavigate: _onNavigate, onEnterCanvas 
         <CardContent className="p-6 space-y-6">
           {step === 1 && (
             <>
-              <div>
-                <Label>场景图片（最多2张）</Label>
-                <div className="mt-2 flex flex-wrap gap-2">
-                  <Button variant="outline" onClick={() => sceneInputRef.current?.click()}>
-                    <Upload className="w-4 h-4 mr-1" /> 选择图片
-                  </Button>
-                  {sceneImages.map((x, idx) => <Badge key={idx}>{x.file.name}</Badge>)}
+              <div className="grid gap-6 md:grid-cols-2">
+                <div>
+                  <div className="mb-3">
+                    <Label className="text-base">场景图片</Label>
+                    <p className="text-sm text-muted-foreground mt-1">上传 1-2 张场景背景图</p>
+                  </div>
+                  <div
+                    className={`group flex h-[260px] cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed px-6 py-6 transition-colors ${
+                      isSceneDragActive ? 'border-primary/60 bg-primary/5' : 'border-muted-foreground/30 hover:border-muted-foreground/60'
+                    }`}
+                    onClick={() => sceneInputRef.current?.click()}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        sceneInputRef.current?.click();
+                      }
+                    }}
+                    onDragEnter={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsSceneDragActive(true);
+                    }}
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsSceneDragActive(true);
+                    }}
+                    onDragLeave={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsSceneDragActive(false);
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsSceneDragActive(false);
+                      const files = Array.from(e.dataTransfer.files || []);
+                      setSceneFiles(files);
+                    }}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    {sceneImages.length ? (
+                      <div className={`grid h-full w-full gap-3 ${sceneImages.length === 1 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                        {sceneImages.map((image, idx) => (
+                          <div key={image.preview} className="flex h-full min-h-0 flex-col rounded-lg border bg-background/70 p-2">
+                            <div className="flex flex-1 items-center justify-center overflow-hidden rounded-md bg-muted/40">
+                              <img
+                                src={image.preview}
+                                alt={`场景图 ${idx + 1}`}
+                                className="h-full w-full object-contain"
+                              />
+                            </div>
+                            <p className="mt-2 truncate text-xs text-muted-foreground">{image.file.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="flex h-full flex-col items-center justify-center gap-3 text-center text-sm text-muted-foreground">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted/40">
+                          <Upload className="h-5 w-5 text-muted-foreground" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-sm font-medium text-foreground">点击或拖拽上传</p>
+                          <p className="text-xs text-muted-foreground">支持 JPG、PNG 格式，最多 2 张</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <input
+                    ref={sceneInputRef}
+                    className="hidden"
+                    type="file"
+                    multiple
+                    accept="image/jpeg,image/png"
+                    onChange={(e) => {
+                      const files = Array.from(e.target.files || []);
+                      setSceneFiles(files);
+                      e.currentTarget.value = '';
+                    }}
+                  />
                 </div>
-                <input
-                  ref={sceneInputRef}
-                  className="hidden"
-                  type="file"
-                  multiple
-                  accept="image/*"
-                  onChange={(e) => {
-                    const files = Array.from(e.target.files || []).slice(0, 2);
-                    setSceneImages(files.map((file) => ({ file, preview: URL.createObjectURL(file) })));
-                  }}
-                />
-              </div>
-              <div>
-                <Label>人物照片（1张）</Label>
-                <div className="mt-2 flex gap-2">
-                  <Button variant="outline" onClick={() => portraitInputRef.current?.click()}>
-                    <Upload className="w-4 h-4 mr-1" /> 选择照片
-                  </Button>
-                  {portraitImage && <Badge>{portraitImage.file.name}</Badge>}
+                <div>
+                  <div className="mb-3">
+                    <Label className="text-base">人物正面照</Label>
+                    <p className="text-sm text-muted-foreground mt-1">上传 1 张清晰的人物正面照</p>
+                  </div>
+                  <div
+                    className={`group flex h-[260px] cursor-pointer flex-col items-center justify-center rounded-xl border border-dashed px-6 py-6 transition-colors ${
+                      isPortraitDragActive ? 'border-primary/60 bg-primary/5' : 'border-muted-foreground/30 hover:border-muted-foreground/60'
+                    }`}
+                    onClick={() => portraitInputRef.current?.click()}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        portraitInputRef.current?.click();
+                      }
+                    }}
+                    onDragEnter={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsPortraitDragActive(true);
+                    }}
+                    onDragOver={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsPortraitDragActive(true);
+                    }}
+                    onDragLeave={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsPortraitDragActive(false);
+                    }}
+                    onDrop={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setIsPortraitDragActive(false);
+                      const files = Array.from(e.dataTransfer.files || []);
+                      setPortraitFile(files);
+                    }}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    {portraitImage ? (
+                      <div className="flex h-full w-full min-h-0 flex-col rounded-lg border bg-background/70 p-2">
+                        <div className="flex flex-1 items-center justify-center overflow-hidden rounded-md bg-muted/40">
+                          <img
+                            src={portraitImage.preview}
+                            alt="人物正面照"
+                            className="h-full w-full object-contain"
+                          />
+                        </div>
+                        <p className="mt-2 truncate text-xs text-muted-foreground">{portraitImage.file.name}</p>
+                      </div>
+                    ) : (
+                      <div className="flex h-full flex-col items-center justify-center gap-3 text-center text-sm text-muted-foreground">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted/40">
+                          <Upload className="h-5 w-5 text-muted-foreground" />
+                        </div>
+                        <div className="space-y-1">
+                          <p className="text-sm font-medium text-foreground">点击或拖拽上传</p>
+                          <p className="text-xs text-muted-foreground">支持 JPG、PNG 格式，最多 1 张</p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                  <input
+                    ref={portraitInputRef}
+                    className="hidden"
+                    type="file"
+                    accept="image/jpeg,image/png"
+                    onChange={(e) => {
+                      const files = Array.from(e.target.files || []);
+                      setPortraitFile(files);
+                      e.currentTarget.value = '';
+                    }}
+                  />
                 </div>
-                <input
-                  ref={portraitInputRef}
-                  className="hidden"
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    if (file) setPortraitImage({ file, preview: URL.createObjectURL(file) });
-                  }}
-                />
               </div>
             </>
           )}
@@ -389,8 +571,8 @@ export function DigitalHumanGeneration({ onNavigate: _onNavigate, onEnterCanvas 
             <Button
               onClick={async () => {
                 if (step === 1) {
-                  if (!portraitImage) return toast.error('请上传老板正面照');
-                  if (!sceneImages.length) return toast.error('请至少上传1张工厂场景图');
+                  if (!portraitImage) return toast.error('请上传人物正面照');
+                  if (!sceneImages.length) return toast.error('请至少上传1张场景图');
                   try {
                     await uploadMaterialsToBackend();
                     setStep(2);
